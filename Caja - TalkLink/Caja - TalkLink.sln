@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caja - TalkLink", "Caja - TalkLink\Caja - TalkLink.csproj", "{C8DC2A98-D3CE-48C4-99D1-E978C8C1A141}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8DC2A98-D3CE-48C4-99D1-E978C8C1A141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8DC2A98-D3CE-48C4-99D1-E978C8C1A141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8DC2A98-D3CE-48C4-99D1-E978C8C1A141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8DC2A98-D3CE-48C4-99D1-E978C8C1A141}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3EEF93B-8D29-48F4-81C4-14F79D512245}
+	EndGlobalSection
+EndGlobal
