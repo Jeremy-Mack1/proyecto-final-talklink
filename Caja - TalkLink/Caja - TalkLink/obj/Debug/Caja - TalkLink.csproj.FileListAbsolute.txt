@@ -1,0 +1,19 @@
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\bin\Debug\Caja - TalkLink.exe.config
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\bin\Debug\Caja - TalkLink.exe
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\bin\Debug\Caja - TalkLink.pdb
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.csproj.AssemblyReference.cache
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja___TalkLink.Properties.Resources.resources
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.csproj.GenerateResource.cache
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.csproj.CoreCompileInputs.cache
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.exe
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.pdb
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja___TalkLink.Login__TalkLink.resources
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\bin\Debug\MaterialSkin.dll
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.csproj.CopyComplete
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja___TalkLink.AddClient.resources
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja___TalkLink.Default.resources
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\bin\Debug\Forms\Login- TalkLink.resx
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\bin\Debug\Forms\Login- TalkLink.cs
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\bin\Debug\Forms\Login- TalkLink.Designer.cs
+C:\Users\Heine\source\repos\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja___TalkLink.Servicios.resources
