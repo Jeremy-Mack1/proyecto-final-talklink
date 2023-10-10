@@ -17,6 +17,11 @@ namespace Caja___TalkLink
             InitializeComponent();
         }
 
-        
+
+
+        private void Mtxbx_Nombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace Caja___TalkLink
         {
             InitializeComponent();
         }
+
+        private void btn_ConsultarServicios_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

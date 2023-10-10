@@ -57,6 +57,7 @@ namespace Caja___TalkLink
             }
         }
 
+      
 
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -233,6 +234,8 @@ namespace Caja___TalkLink
         private void Default_Load(object sender, EventArgs e)
         {
             formSize = this.ClientSize;
+            CloseTimer.Start();
+
         }
 
 
@@ -283,6 +286,47 @@ namespace Caja___TalkLink
         private void btn_LogOut_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_Gain_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_DineroActual_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CloseTimer_Tick(object sender, EventArgs e)
+        {
+            // Obtener la hora actual del sistema
+            DateTime horaActual = DateTime.Now;
+
+            // Calcular la hora de medianoche (00:00)
+            DateTime medianoche = DateTime.Today.AddDays(1);
+
+            // Calcular el tiempo restante hasta medianoche
+            TimeSpan tiempoRestante = medianoche - horaActual;
+
+            // Actualizar el contenido del Label con el tiempo restante formateado
+            lbl_TiempoCorte.Text = string.Format("{0:D2}:{1:D2}:{2:D2}",
+                tiempoRestante.Hours, tiempoRestante.Minutes, tiempoRestante.Seconds);
         }
     }
 }

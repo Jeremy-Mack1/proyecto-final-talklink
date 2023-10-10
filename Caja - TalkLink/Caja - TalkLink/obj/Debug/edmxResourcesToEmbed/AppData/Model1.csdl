@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="ID_Cliente" />
+    </Key>
+    <Property Name="ID_Cliente" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+    <Property Name="Telefon_Alt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clientes" EntityType="Self.Cliente" />
+  </EntityContainer>
+</Schema>

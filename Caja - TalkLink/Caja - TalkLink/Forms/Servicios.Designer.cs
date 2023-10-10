@@ -28,48 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_ConsultarServicios = new FontAwesome.Sharp.IconButton();
-            this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            this.txtbx_NomServicio = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtbx_Descripcion = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtbx_Tarifa = new MaterialSkin.Controls.MaterialTextBox();
             this.SuspendLayout();
             // 
-            // btn_ConsultarServicios
+            // txtbx_NomServicio
             // 
-            this.btn_ConsultarServicios.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btn_ConsultarServicios.IconColor = System.Drawing.Color.Black;
-            this.btn_ConsultarServicios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_ConsultarServicios.Location = new System.Drawing.Point(77, 45);
-            this.btn_ConsultarServicios.Name = "btn_ConsultarServicios";
-            this.btn_ConsultarServicios.Size = new System.Drawing.Size(161, 55);
-            this.btn_ConsultarServicios.TabIndex = 0;
-            this.btn_ConsultarServicios.Text = "Consultar Servicios";
-            this.btn_ConsultarServicios.UseVisualStyleBackColor = true;
+            this.txtbx_NomServicio.AnimateReadOnly = false;
+            this.txtbx_NomServicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_NomServicio.Depth = 0;
+            this.txtbx_NomServicio.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_NomServicio.Hint = "Nombre del Servicio";
+            this.txtbx_NomServicio.LeadingIcon = null;
+            this.txtbx_NomServicio.Location = new System.Drawing.Point(233, 51);
+            this.txtbx_NomServicio.MaxLength = 50;
+            this.txtbx_NomServicio.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtbx_NomServicio.Multiline = false;
+            this.txtbx_NomServicio.Name = "txtbx_NomServicio";
+            this.txtbx_NomServicio.Size = new System.Drawing.Size(228, 50);
+            this.txtbx_NomServicio.TabIndex = 2;
+            this.txtbx_NomServicio.Text = "";
+            this.txtbx_NomServicio.TrailingIcon = null;
+            this.txtbx_NomServicio.UseAccent = false;
             // 
-            // materialListView1
+            // txtbx_Descripcion
             // 
-            this.materialListView1.AutoSizeTable = false;
-            this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialListView1.Depth = 0;
-            this.materialListView1.FullRowSelect = true;
-            this.materialListView1.HideSelection = false;
-            this.materialListView1.Location = new System.Drawing.Point(77, 136);
-            this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
-            this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialListView1.Name = "materialListView1";
-            this.materialListView1.OwnerDraw = true;
-            this.materialListView1.Size = new System.Drawing.Size(304, 291);
-            this.materialListView1.TabIndex = 13;
-            this.materialListView1.UseCompatibleStateImageBehavior = false;
-            this.materialListView1.View = System.Windows.Forms.View.Details;
+            this.txtbx_Descripcion.AnimateReadOnly = false;
+            this.txtbx_Descripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_Descripcion.Depth = 0;
+            this.txtbx_Descripcion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_Descripcion.Hint = "Descripcion";
+            this.txtbx_Descripcion.LeadingIcon = null;
+            this.txtbx_Descripcion.Location = new System.Drawing.Point(497, 51);
+            this.txtbx_Descripcion.MaxLength = 50;
+            this.txtbx_Descripcion.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtbx_Descripcion.Multiline = false;
+            this.txtbx_Descripcion.Name = "txtbx_Descripcion";
+            this.txtbx_Descripcion.Size = new System.Drawing.Size(228, 50);
+            this.txtbx_Descripcion.TabIndex = 3;
+            this.txtbx_Descripcion.Text = "";
+            this.txtbx_Descripcion.TrailingIcon = null;
+            this.txtbx_Descripcion.UseAccent = false;
+            // 
+            // txtbx_Tarifa
+            // 
+            this.txtbx_Tarifa.AnimateReadOnly = false;
+            this.txtbx_Tarifa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_Tarifa.Depth = 0;
+            this.txtbx_Tarifa.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_Tarifa.Hint = "$ Monto";
+            this.txtbx_Tarifa.LeadingIcon = null;
+            this.txtbx_Tarifa.Location = new System.Drawing.Point(233, 121);
+            this.txtbx_Tarifa.MaxLength = 50;
+            this.txtbx_Tarifa.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtbx_Tarifa.Multiline = false;
+            this.txtbx_Tarifa.Name = "txtbx_Tarifa";
+            this.txtbx_Tarifa.Size = new System.Drawing.Size(143, 50);
+            this.txtbx_Tarifa.TabIndex = 4;
+            this.txtbx_Tarifa.Text = "";
+            this.txtbx_Tarifa.TrailingIcon = null;
+            this.txtbx_Tarifa.UseAccent = false;
             // 
             // Servicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 485);
-            this.Controls.Add(this.materialListView1);
-            this.Controls.Add(this.btn_ConsultarServicios);
+            this.Controls.Add(this.txtbx_Tarifa);
+            this.Controls.Add(this.txtbx_Descripcion);
+            this.Controls.Add(this.txtbx_NomServicio);
             this.Name = "Servicios";
             this.Text = "Servicios";
             this.ResumeLayout(false);
@@ -78,7 +106,8 @@
 
         #endregion
 
-        private FontAwesome.Sharp.IconButton btn_ConsultarServicios;
-        private MaterialSkin.Controls.MaterialListView materialListView1;
+        private MaterialSkin.Controls.MaterialTextBox txtbx_NomServicio;
+        private MaterialSkin.Controls.MaterialTextBox txtbx_Descripcion;
+        private MaterialSkin.Controls.MaterialTextBox txtbx_Tarifa;
     }
 }
