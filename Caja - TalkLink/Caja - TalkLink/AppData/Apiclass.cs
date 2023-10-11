@@ -4,17 +4,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using Caja___TalkLink.AppData;
+using System.Data;
+using System.Net;
+using TalkLinkWebApp.Models;
 
 namespace Caja___TalkLink
 {
     public class Apiclass
     {
-        private static void GetItem(int id)
+        private static void GetItem(int id, string Cliente )
         {
             var client = new RestClient("https://talklinkapi.azurewebsites.net/api");
             var request = new RestRequest($"/item/{id}", Method.Get);
             var response = client.Execute(request);
             Console.WriteLine(response.Content);
+
+           
         }
 
         private static void GetItems()
@@ -26,7 +33,7 @@ namespace Caja___TalkLink
         }
 
 
-        private static void PostItem(string data, string)
+        private static void PostItem(string data, string cosa)
         {
             var client = new RestClient("http://localhost:8080");
             var request = new RestRequest("items", Method.Post);

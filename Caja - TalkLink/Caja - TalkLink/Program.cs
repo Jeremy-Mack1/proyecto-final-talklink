@@ -16,7 +16,7 @@ namespace Caja___TalkLink
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Default());
+            Application.Run(new Login__TalkLink());
         }
     }
 }

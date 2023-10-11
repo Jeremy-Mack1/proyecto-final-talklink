@@ -64,6 +64,9 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
@@ -74,6 +77,7 @@
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
@@ -118,13 +122,12 @@
     <Compile Include="AppData\Cliente.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="AppData\DataSet1.Designer.cs">
+    <Compile Include="AppData\Apiclass.cs" />
+    <Compile Include="AppData\TLDataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <DependentUpon>TLDataset.xsd</DependentUpon>
     </Compile>
-    <Compile Include="AppData\Apiclass.cs" />
-    <Compile Include="Copy.cs" />
     <Compile Include="Forms\AddClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,7 +177,6 @@
     <Compile Include="Forms\Servicios.Designer.cs">
       <DependentUpon>Servicios.cs</DependentUpon>
     </Compile>
-    <Compile Include="prueba.cs" />
     <Compile Include="Servicios\Ciudad.cs" />
     <Compile Include="Servicios\Cliente.cs" />
     <Compile Include="Servicios\Contrato.cs" />
@@ -184,6 +186,7 @@
     <Compile Include="Servicios\Perfil.cs" />
     <Compile Include="Servicios\Servicio.cs" />
     <Compile Include="Servicios\Usuario.cs" />
+    <Compile Include="AppData\updatedataset.cs" />
     <Content Include="AppData\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -201,16 +204,16 @@
     <None Include="AppData\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
-    <None Include="AppData\DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <None Include="AppData\TLDataset.xsc">
+      <DependentUpon>TLDataset.xsd</DependentUpon>
     </None>
-    <None Include="AppData\DataSet1.xsd">
+    <None Include="AppData\TLDataset.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>TLDataset.Designer.cs</LastGenOutput>
     </None>
-    <None Include="AppData\DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <None Include="AppData\TLDataset.xss">
+      <DependentUpon>TLDataset.xsd</DependentUpon>
     </None>
     <None Include="Resources\money-management.png" />
     <EmbeddedResource Include="Forms\AddClient.resx">
@@ -231,12 +234,12 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Content Include="AppData\Database1.mdf">
+    <Content Include="AppData\TLDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="AppData\Database1_log.ldf">
+    <Content Include="AppData\TLDatabase_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
+      <DependentUpon>TLDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />

@@ -52,7 +52,7 @@
             this.Mtxbx_Nombre.AnimateReadOnly = false;
             this.Mtxbx_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Mtxbx_Nombre.Depth = 0;
-            this.Mtxbx_Nombre.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mtxbx_Nombre.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Mtxbx_Nombre.Hint = "Nombre";
             this.Mtxbx_Nombre.LeadingIcon = null;
             this.Mtxbx_Nombre.Location = new System.Drawing.Point(28, 146);
@@ -71,7 +71,7 @@
             this.Mtxbx_Apellido.AnimateReadOnly = false;
             this.Mtxbx_Apellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Mtxbx_Apellido.Depth = 0;
-            this.Mtxbx_Apellido.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mtxbx_Apellido.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Mtxbx_Apellido.Hint = "Apellido";
             this.Mtxbx_Apellido.LeadingIcon = null;
             this.Mtxbx_Apellido.Location = new System.Drawing.Point(217, 146);
@@ -89,7 +89,7 @@
             this.Mtxbx_Telefono.AnimateReadOnly = false;
             this.Mtxbx_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Mtxbx_Telefono.Depth = 0;
-            this.Mtxbx_Telefono.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mtxbx_Telefono.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Mtxbx_Telefono.Hint = "Telefono";
             this.Mtxbx_Telefono.LeadingIcon = null;
             this.Mtxbx_Telefono.Location = new System.Drawing.Point(28, 291);
@@ -107,7 +107,7 @@
             this.Mtxbx_Documento.AnimateReadOnly = false;
             this.Mtxbx_Documento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Mtxbx_Documento.Depth = 0;
-            this.Mtxbx_Documento.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mtxbx_Documento.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Mtxbx_Documento.Hint = "Documento";
             this.Mtxbx_Documento.LeadingIcon = null;
             this.Mtxbx_Documento.Location = new System.Drawing.Point(217, 30);
@@ -157,7 +157,7 @@
             this.Mtxbx_FechaNacimiento.AnimateReadOnly = false;
             this.Mtxbx_FechaNacimiento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Mtxbx_FechaNacimiento.Depth = 0;
-            this.Mtxbx_FechaNacimiento.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mtxbx_FechaNacimiento.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Mtxbx_FechaNacimiento.Hint = "DD/MM/AA";
             this.Mtxbx_FechaNacimiento.LeadingIcon = null;
             this.Mtxbx_FechaNacimiento.Location = new System.Drawing.Point(28, 214);
@@ -230,7 +230,7 @@
             this.txtbx_altTelefono.AnimateReadOnly = false;
             this.txtbx_altTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbx_altTelefono.Depth = 0;
-            this.txtbx_altTelefono.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_altTelefono.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtbx_altTelefono.Hint = "Telefono alt";
             this.txtbx_altTelefono.LeadingIcon = null;
             this.txtbx_altTelefono.Location = new System.Drawing.Point(28, 357);
@@ -248,7 +248,7 @@
             this.txtbx_Direccion.AnimateReadOnly = false;
             this.txtbx_Direccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbx_Direccion.Depth = 0;
-            this.txtbx_Direccion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_Direccion.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtbx_Direccion.Hint = "Dirección";
             this.txtbx_Direccion.LeadingIcon = null;
             this.txtbx_Direccion.Location = new System.Drawing.Point(289, 291);
@@ -266,7 +266,7 @@
             this.txtbx_Estado.AnimateReadOnly = false;
             this.txtbx_Estado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbx_Estado.Depth = 0;
-            this.txtbx_Estado.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_Estado.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtbx_Estado.Hint = "Estado";
             this.txtbx_Estado.LeadingIcon = null;
             this.txtbx_Estado.Location = new System.Drawing.Point(289, 357);

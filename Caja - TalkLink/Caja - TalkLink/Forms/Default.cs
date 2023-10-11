@@ -64,10 +64,9 @@ namespace Caja___TalkLink
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
-        {
+        
 
-        }
+
 
         private void panelCornerIcons_MouseDown(object sender, MouseEventArgs e)
         {
