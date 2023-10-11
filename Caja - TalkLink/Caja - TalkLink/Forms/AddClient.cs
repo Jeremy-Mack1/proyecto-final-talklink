@@ -48,12 +48,12 @@ namespace Caja___TalkLink
         private void HabilitarBoton()
         {
             bool camposCompletos = Mtxbx_TipoDocumento.SelectedIndex != -1 &&
-                                   (!string.IsNullOrWhiteSpace(Mtxbx_Documento.Text) && (Mtxbx_Documento.Text.Length == Mtxbx_Documento.MaxLength)) &&
+                                   Mtxbx_Documento.Text.Length == Mtxbx_Documento.MaxLength &&
                                    !string.IsNullOrWhiteSpace(Mtxbx_Nombre.Text) &&
                                    !string.IsNullOrWhiteSpace(Mtxbx_Apellido.Text) &&
                                    EsFechaValida(Mtxbx_FechaNacimiento.Text) &&
-                                   (!string.IsNullOrWhiteSpace(MtxbxTelefono.Text) && (MtxbxTelefono.Text.Length == MtxbxTelefono.MaxLength)) &&
-                                   (!string.IsNullOrWhiteSpace(MtxbxTelefonoAlt.Text) && (MtxbxTelefonoAlt.Text.Length == MtxbxTelefonoAlt.MaxLength)) &&
+                                   MtxbxTelefono.Text.Length == MtxbxTelefono.MaxLength &&
+                                   MtxbxTelefonoAlt.Text.Length == MtxbxTelefonoAlt.MaxLength &&
                                    !string.IsNullOrWhiteSpace(txtbx_Direccion.Text) &&
                                    !string.IsNullOrWhiteSpace(txtbx_Estado.Text) &&
                                    (MRB_Masculino.Checked || MRB_Femenino.Checked);
