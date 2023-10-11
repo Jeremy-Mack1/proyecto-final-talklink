@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using TalkLinkWebApp.Models;
-using Caja___TalkLink.
+//using Caja___TalkLink.
 
 
 namespace Caja___TalkLink
@@ -14,7 +14,7 @@ namespace Caja___TalkLink
     {
 
         //Aqui estamos deserializando lo que obtenemos por el api
-        string jsonstring = JsonSerializer.Deserialize<>(GetItem(4, "ciudad"));
+        /*string jsonstring = JsonSerializer.Deserialize<>(GetItem(4, "ciudad"));
 
         Ciudad ciudadDeserializado = new Ciudad();
         ciudadDeserializado.ID_Ciudad = jsonstring.ID_Ciudad;
@@ -27,7 +27,7 @@ namespace Caja___TalkLink
         ciudadSerializado.Cod_Postal = 12389;
 
         var jsonSerialized = JsonSerializer.Serialize(ciudadSerializado);
-
+        */
 
     }
 }

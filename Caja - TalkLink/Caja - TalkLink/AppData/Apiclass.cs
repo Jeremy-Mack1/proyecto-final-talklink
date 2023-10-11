@@ -26,7 +26,7 @@ namespace Caja___TalkLink
         }
 
 
-        private static void PostItem(string data, string)
+        private static void PostItem(string data)
         {
             var client = new RestClient("http://localhost:8080");
             var request = new RestRequest("items", Method.Post);
