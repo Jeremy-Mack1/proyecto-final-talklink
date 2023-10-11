@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -53,8 +54,8 @@ namespace Caja___TalkLink
                                    EsFechaValida(Mtxbx_FechaNacimiento.Text) &&
                                    TieneFormatoTelefonoValido(mmtxtTelefono.Text) &&
                                    TieneFormatoTelefonoValido(mmtxtTelefonoalt.Text) &&
-                                   !string.IsNullOrWhiteSpace(txtbx_Direccion.Text) &&
-                                   !string.IsNullOrWhiteSpace(txtbx_Estado.Text) &&
+                                   !string.IsNullOrWhiteSpace(Mtxtbx_Direccion.Text) &&
+                                   !string.IsNullOrWhiteSpace(Mtxtbx_Estado.Text) &&
                                    (MRB_Masculino.Checked || MRB_Femenino.Checked);
 
             mbtnAgregarCliente.Enabled = camposCompletos;
@@ -123,7 +124,7 @@ namespace Caja___TalkLink
                 {
                     ComboBox comboBox = (ComboBox)ctrl;
                     comboBox.SelectedIndex = -1; // Establecer el ComboBox como no seleccionado (vacío).
-                } 
+                }
                 else if (ctrl is RadioButton)
                 {
                     RadioButton radiobutton = (RadioButton)ctrl;
@@ -146,10 +147,60 @@ namespace Caja___TalkLink
         {
             if (MessageBox.Show("¿Estás seguro?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show("Solicitud enviada con éxito", "Éxito", MessageBoxButtons.OK); // Limpia todos los controles en el formulario
-                LimpiarControles(this);
+                if (MessageBox.Show("¿Estás seguro?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    // Recopila los datos ingresados por el usuario
+                    string nombre = Mtxbx_Nombre.Text;
+                    string apellido = Mtxbx_Apellido.Text;
+                    string tipoDocumento = Mtxbx_TipoDocumento.Text;
+                    string documento = Mtxbx_Documento.Text;
+                    string telefono = mmtxtTelefono.Text;
+                    string telefonoAlt = mmtxtTelefonoalt.Text;
+                    string direccion = Mtxtbx_Direccion.Text;
+                    string estado = Mtxtbx_Estado.Text;
+
+                    string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Heine\\Documents\\Herdel Uni\\Proyecto Final - Desarrollo III\\proyecto-final-talklink\\Caja - TalkLink\\Caja - TalkLink\\AppData\\TLDatabase.mdf;Integrated Security=True";
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        // Define el nombre del store procedure
+                        string spName = "sp_UpsertCliente";
+
+                        using (SqlCommand command = new SqlCommand(spName, connection))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
+
+                            // Asigna los parámetros con los valores recopilados
+                            command.Parameters.AddWithValue("@Nombre", nombre);
+                            command.Parameters.AddWithValue("@Apellido", apellido);
+                            command.Parameters.AddWithValue("@TipoDocumento", tipoDocumento);
+                            command.Parameters.AddWithValue("@Documento", documento);
+                            command.Parameters.AddWithValue("@telefono", telefono);
+                            command.Parameters.AddWithValue("@TelefonoAlt", telefonoAlt);
+                            command.Parameters.AddWithValue("@Direccion", direccion);
+                            command.Parameters.AddWithValue("@Estado", estado);
+
+                            // Ejecuta el store procedure
+                            command.ExecuteNonQuery();
+                        }
+                    }
+
+                    MessageBox.Show("Solicitud enviada con éxito", "Éxito", MessageBoxButtons.OK);
+                    LimpiarControles(this);
+                }
+
+
             }
+        }
+
+        private void mmtxtTelefonoalt_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
 }
+
+        
+  

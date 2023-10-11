@@ -39,15 +39,12 @@
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.mbtnConsultar = new MaterialSkin.Controls.MaterialButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.txtbx_Direccion = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtbx_Estado = new MaterialSkin.Controls.MaterialTextBox();
+            this.Mtxtbx_Direccion = new MaterialSkin.Controls.MaterialTextBox();
+            this.Mtxtbx_Estado = new MaterialSkin.Controls.MaterialTextBox();
             this.Mtxbx_TipoDocumento = new MaterialSkin.Controls.MaterialComboBox();
             this.mmtxtTelefono = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.mmtxtTelefonoalt = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.Mtxbx_Documento = new MaterialSkin.Controls.MaterialMaskedTextBox();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // Mtxbx_Nombre
@@ -132,7 +129,7 @@
             this.Mtxbx_FechaNacimiento.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Mtxbx_FechaNacimiento.Hint = "DD/MM/AA";
             this.Mtxbx_FechaNacimiento.LeadingIcon = null;
-            this.Mtxbx_FechaNacimiento.Location = new System.Drawing.Point(28, 214);
+            this.Mtxbx_FechaNacimiento.Location = new System.Drawing.Point(28, 229);
             this.Mtxbx_FechaNacimiento.MaxLength = 50;
             this.Mtxbx_FechaNacimiento.MouseState = MaterialSkin.MouseState.OUT;
             this.Mtxbx_FechaNacimiento.Multiline = false;
@@ -200,44 +197,44 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "buscar.png");
             // 
-            // txtbx_Direccion
+            // Mtxtbx_Direccion
             // 
-            this.txtbx_Direccion.AnimateReadOnly = false;
-            this.txtbx_Direccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbx_Direccion.Depth = 0;
-            this.txtbx_Direccion.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtbx_Direccion.Hint = "Dirección";
-            this.txtbx_Direccion.LeadingIcon = null;
-            this.txtbx_Direccion.Location = new System.Drawing.Point(289, 310);
-            this.txtbx_Direccion.MaxLength = 50;
-            this.txtbx_Direccion.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtbx_Direccion.Multiline = false;
-            this.txtbx_Direccion.Name = "txtbx_Direccion";
-            this.txtbx_Direccion.Size = new System.Drawing.Size(223, 50);
-            this.txtbx_Direccion.TabIndex = 7;
-            this.txtbx_Direccion.Text = "";
-            this.txtbx_Direccion.TrailingIcon = null;
-            this.txtbx_Direccion.TextChanged += new System.EventHandler(this.Mtxbx_Nombre_TextChanged);
+            this.Mtxtbx_Direccion.AnimateReadOnly = false;
+            this.Mtxtbx_Direccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Mtxtbx_Direccion.Depth = 0;
+            this.Mtxtbx_Direccion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mtxtbx_Direccion.Hint = "Dirección";
+            this.Mtxtbx_Direccion.LeadingIcon = null;
+            this.Mtxtbx_Direccion.Location = new System.Drawing.Point(289, 310);
+            this.Mtxtbx_Direccion.MaxLength = 50;
+            this.Mtxtbx_Direccion.MouseState = MaterialSkin.MouseState.OUT;
+            this.Mtxtbx_Direccion.Multiline = false;
+            this.Mtxtbx_Direccion.Name = "Mtxtbx_Direccion";
+            this.Mtxtbx_Direccion.Size = new System.Drawing.Size(223, 50);
+            this.Mtxtbx_Direccion.TabIndex = 7;
+            this.Mtxtbx_Direccion.Text = "";
+            this.Mtxtbx_Direccion.TrailingIcon = null;
+            this.Mtxtbx_Direccion.TextChanged += new System.EventHandler(this.Mtxbx_Nombre_TextChanged);
             // 
-            // txtbx_Estado
+            // Mtxtbx_Estado
             // 
-            this.txtbx_Estado.AnimateReadOnly = false;
-            this.txtbx_Estado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbx_Estado.Depth = 0;
-            this.txtbx_Estado.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtbx_Estado.Hint = "Estado";
-            this.txtbx_Estado.LeadingIcon = null;
-            this.txtbx_Estado.Location = new System.Drawing.Point(289, 374);
-            this.txtbx_Estado.MaxLength = 50;
-            this.txtbx_Estado.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtbx_Estado.Multiline = false;
-            this.txtbx_Estado.Name = "txtbx_Estado";
-            this.txtbx_Estado.Size = new System.Drawing.Size(223, 50);
-            this.txtbx_Estado.TabIndex = 9;
-            this.txtbx_Estado.Text = "";
-            this.txtbx_Estado.TrailingIcon = null;
-            this.txtbx_Estado.TextChanged += new System.EventHandler(this.Mtxbx_Nombre_TextChanged);
-            this.txtbx_Estado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PermitirSoloLetras);
+            this.Mtxtbx_Estado.AnimateReadOnly = false;
+            this.Mtxtbx_Estado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Mtxtbx_Estado.Depth = 0;
+            this.Mtxtbx_Estado.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mtxtbx_Estado.Hint = "Estado";
+            this.Mtxtbx_Estado.LeadingIcon = null;
+            this.Mtxtbx_Estado.Location = new System.Drawing.Point(289, 374);
+            this.Mtxtbx_Estado.MaxLength = 50;
+            this.Mtxtbx_Estado.MouseState = MaterialSkin.MouseState.OUT;
+            this.Mtxtbx_Estado.Multiline = false;
+            this.Mtxtbx_Estado.Name = "Mtxtbx_Estado";
+            this.Mtxtbx_Estado.Size = new System.Drawing.Size(223, 50);
+            this.Mtxtbx_Estado.TabIndex = 9;
+            this.Mtxtbx_Estado.Text = "";
+            this.Mtxtbx_Estado.TrailingIcon = null;
+            this.Mtxtbx_Estado.TextChanged += new System.EventHandler(this.Mtxbx_Nombre_TextChanged);
+            this.Mtxtbx_Estado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PermitirSoloLetras);
             // 
             // Mtxbx_TipoDocumento
             // 
@@ -275,9 +272,10 @@
             this.mmtxtTelefono.BeepOnError = false;
             this.mmtxtTelefono.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.mmtxtTelefono.Depth = 0;
-            this.mmtxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mmtxtTelefono.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mmtxtTelefono.HidePromptOnLeave = false;
             this.mmtxtTelefono.HideSelection = true;
+            this.mmtxtTelefono.Hint = "Telefono";
             this.mmtxtTelefono.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.mmtxtTelefono.LeadingIcon = null;
             this.mmtxtTelefono.Location = new System.Drawing.Point(28, 312);
@@ -318,7 +316,7 @@
             this.mmtxtTelefonoalt.BeepOnError = false;
             this.mmtxtTelefonoalt.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.mmtxtTelefonoalt.Depth = 0;
-            this.mmtxtTelefonoalt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mmtxtTelefonoalt.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mmtxtTelefonoalt.HidePromptOnLeave = false;
             this.mmtxtTelefonoalt.HideSelection = true;
             this.mmtxtTelefonoalt.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
@@ -349,6 +347,7 @@
             this.mmtxtTelefonoalt.TrailingIcon = null;
             this.mmtxtTelefonoalt.UseSystemPasswordChar = false;
             this.mmtxtTelefonoalt.ValidatingType = null;
+            this.mmtxtTelefonoalt.Click += new System.EventHandler(this.mmtxtTelefonoalt_Click);
             this.mmtxtTelefonoalt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PermitirSoloNumeros);
             this.mmtxtTelefonoalt.TextChanged += new System.EventHandler(this.Mtxbx_Nombre_TextChanged);
             // 
@@ -365,6 +364,7 @@
             this.Mtxbx_Documento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Mtxbx_Documento.HidePromptOnLeave = false;
             this.Mtxbx_Documento.HideSelection = true;
+            this.Mtxbx_Documento.Hint = "Documento";
             this.Mtxbx_Documento.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.Mtxbx_Documento.LeadingIcon = null;
             this.Mtxbx_Documento.Location = new System.Drawing.Point(217, 30);
@@ -387,6 +387,7 @@
             this.Mtxbx_Documento.Size = new System.Drawing.Size(212, 48);
             this.Mtxbx_Documento.SkipLiterals = true;
             this.Mtxbx_Documento.TabIndex = 1;
+            this.Mtxbx_Documento.TabStop = false;
             this.Mtxbx_Documento.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Mtxbx_Documento.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.Mtxbx_Documento.TrailingIcon = null;
@@ -394,62 +395,18 @@
             this.Mtxbx_Documento.ValidatingType = null;
             this.Mtxbx_Documento.TextChanged += new System.EventHandler(this.Mtxbx_Nombre_TextChanged);
             // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(222, 81);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(83, 19);
-            this.materialLabel1.TabIndex = 13;
-            this.materialLabel1.Text = "Documento";
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.ForeColor = System.Drawing.Color.Black;
-            this.materialLabel2.Location = new System.Drawing.Point(27, 286);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(64, 19);
-            this.materialLabel2.TabIndex = 14;
-            this.materialLabel2.Text = "Teléfono";
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.ForeColor = System.Drawing.Color.Black;
-            this.materialLabel3.Location = new System.Drawing.Point(27, 427);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(143, 19);
-            this.materialLabel3.TabIndex = 15;
-            this.materialLabel3.Text = "Teléfono alternativo";
-            // 
             // AddClient
             // 
             this.AcceptButton = this.mbtnAgregarCliente;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 582);
-            this.Controls.Add(this.materialLabel3);
-            this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.Mtxbx_Documento);
             this.Controls.Add(this.mmtxtTelefonoalt);
             this.Controls.Add(this.mmtxtTelefono);
             this.Controls.Add(this.Mtxbx_TipoDocumento);
-            this.Controls.Add(this.txtbx_Estado);
-            this.Controls.Add(this.txtbx_Direccion);
+            this.Controls.Add(this.Mtxtbx_Estado);
+            this.Controls.Add(this.Mtxtbx_Direccion);
             this.Controls.Add(this.mbtnConsultar);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.mbtnAgregarCliente);
@@ -477,14 +434,11 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialButton mbtnConsultar;
         private System.Windows.Forms.ImageList imageList1;
-        private MaterialSkin.Controls.MaterialTextBox txtbx_Direccion;
-        private MaterialSkin.Controls.MaterialTextBox txtbx_Estado;
+        private MaterialSkin.Controls.MaterialTextBox Mtxtbx_Direccion;
+        private MaterialSkin.Controls.MaterialTextBox Mtxtbx_Estado;
         private MaterialSkin.Controls.MaterialComboBox Mtxbx_TipoDocumento;
         private MaterialSkin.Controls.MaterialMaskedTextBox mmtxtTelefono;
         private MaterialSkin.Controls.MaterialMaskedTextBox mmtxtTelefonoalt;
         private MaterialSkin.Controls.MaterialMaskedTextBox Mtxbx_Documento;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
     }
 }
