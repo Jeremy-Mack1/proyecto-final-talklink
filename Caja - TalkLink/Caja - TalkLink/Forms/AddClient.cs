@@ -48,54 +48,17 @@ namespace Caja___TalkLink
         private void HabilitarBoton()
         {
             bool camposCompletos = Mtxbx_TipoDocumento.SelectedIndex != -1 &&
-                                   TieneMascaraDocumentoValida(Mtxbx_Documento.Mask, Mtxbx_Documento.Text) &&
+                                   (!string.IsNullOrWhiteSpace(Mtxbx_Documento.Text) && (Mtxbx_Documento.Text.Length == Mtxbx_Documento.MaxLength)) &&
                                    !string.IsNullOrWhiteSpace(Mtxbx_Nombre.Text) &&
                                    !string.IsNullOrWhiteSpace(Mtxbx_Apellido.Text) &&
                                    EsFechaValida(Mtxbx_FechaNacimiento.Text) &&
-                                   TieneFormatoTelefonoValido(mmtxtTelefono.Text) &&
-                                   TieneFormatoTelefonoValido(mmtxtTelefonoalt.Text) &&
+                                   (!string.IsNullOrWhiteSpace(MtxbxTelefono.Text) && (MtxbxTelefono.Text.Length == MtxbxTelefono.MaxLength)) &&
+                                   (!string.IsNullOrWhiteSpace(MtxbxTelefonoAlt.Text) && (MtxbxTelefonoAlt.Text.Length == MtxbxTelefonoAlt.MaxLength)) &&
                                    !string.IsNullOrWhiteSpace(txtbx_Direccion.Text) &&
                                    !string.IsNullOrWhiteSpace(txtbx_Estado.Text) &&
                                    (MRB_Masculino.Checked || MRB_Femenino.Checked);
 
             mbtnAgregarCliente.Enabled = camposCompletos;
-        }
-
-        private bool TieneMascaraDocumentoValida(string mascara, string valor)
-        {
-            // Eliminar caracteres no válidos de la máscara y el valor
-            string mascaraLimpia = new string(mascara.Where(c => char.IsLetterOrDigit(c)).ToArray());
-            string valorLimpio = new string(valor.Where(c => char.IsLetterOrDigit(c)).ToArray());
-
-            return mascaraLimpia.Length == valorLimpio.Length;
-        }
-
-        private bool TieneFormatoTelefonoValido(string telefono)
-        {
-            // Verificar que el teléfono tenga el formato esperado "000-000-0000"
-            string telefonoLimpio = telefono.Replace("-", ""); // Quitar guiones
-            return telefonoLimpio.Length == 10 && telefonoLimpio.All(char.IsDigit);
-        }
-
-        private void Mtxbx_TipoDocumento_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Mtxbx_Documento.Mask = ObtenerMascaraDocumento(Mtxbx_TipoDocumento.SelectedIndex);
-            HabilitarBoton();
-        }
-
-        private string ObtenerMascaraDocumento(int tipoDocumentoIndex)
-        {
-            Mtxbx_Documento.Enabled = tipoDocumentoIndex != -1;
-
-            switch (tipoDocumentoIndex)
-            {
-                case 0: // Cédula
-                    return "000-0000000-0";
-                case 1: // Pasaporte
-                    return "AA000000";
-                default:
-                    return ""; // Otra opción, sin máscara
-            }
         }
 
         private bool EsFechaValida(string fechaStr)
@@ -106,6 +69,26 @@ namespace Caja___TalkLink
             }
 
             return false; // La fecha ingresada no es válida
+        }
+
+        private void Mtxbx_TipoDocumento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Mtxbx_Documento.Enabled = Mtxbx_TipoDocumento.SelectedIndex != -1;
+
+            switch (Mtxbx_TipoDocumento.SelectedIndex)
+            {
+                case 0: // Cédula
+                    Mtxbx_Documento.MaxLength = 11;
+                    break;
+                case 1: // Pasaporte
+                    Mtxbx_Documento.MaxLength = 9;
+                    break;
+                default:
+                    Mtxbx_Documento.Text = "";
+                    break;
+            }
+
+            HabilitarBoton();
         }
 
         private void LimpiarControles(Control control)
@@ -132,7 +115,6 @@ namespace Caja___TalkLink
                 }
             }
         }
-        #endregion
 
         private void Mtxbx_Nombre_TextChanged(object sender, EventArgs e)
         {
@@ -152,5 +134,6 @@ namespace Caja___TalkLink
                 LimpiarControles(this);
             }
         }
+        #endregion
     }
 }
