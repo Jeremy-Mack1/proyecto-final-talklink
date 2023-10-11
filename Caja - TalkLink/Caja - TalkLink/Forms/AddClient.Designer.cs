@@ -45,9 +45,6 @@
             this.mmtxtTelefono = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.mmtxtTelefonoalt = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.Mtxbx_Documento = new MaterialSkin.Controls.MaterialMaskedTextBox();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // Mtxbx_Nombre
@@ -278,16 +275,17 @@
             this.mmtxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mmtxtTelefono.HidePromptOnLeave = false;
             this.mmtxtTelefono.HideSelection = true;
+            this.mmtxtTelefono.Hint = "Teléfono";
             this.mmtxtTelefono.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.mmtxtTelefono.LeadingIcon = null;
             this.mmtxtTelefono.Location = new System.Drawing.Point(28, 312);
-            this.mmtxtTelefono.Mask = "000-000-0000";
+            this.mmtxtTelefono.Mask = "0000000000";
             this.mmtxtTelefono.MaxLength = 32767;
             this.mmtxtTelefono.MouseState = MaterialSkin.MouseState.OUT;
             this.mmtxtTelefono.Name = "mmtxtTelefono";
             this.mmtxtTelefono.PasswordChar = '\0';
             this.mmtxtTelefono.PrefixSuffixText = null;
-            this.mmtxtTelefono.PromptChar = '_';
+            this.mmtxtTelefono.PromptChar = ' ';
             this.mmtxtTelefono.ReadOnly = false;
             this.mmtxtTelefono.RejectInputOnFirstFailure = false;
             this.mmtxtTelefono.ResetOnPrompt = true;
@@ -321,16 +319,17 @@
             this.mmtxtTelefonoalt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mmtxtTelefonoalt.HidePromptOnLeave = false;
             this.mmtxtTelefonoalt.HideSelection = true;
+            this.mmtxtTelefonoalt.Hint = "Teléfono Alternativo";
             this.mmtxtTelefonoalt.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.mmtxtTelefonoalt.LeadingIcon = null;
             this.mmtxtTelefonoalt.Location = new System.Drawing.Point(28, 376);
-            this.mmtxtTelefonoalt.Mask = "000-000-0000";
+            this.mmtxtTelefonoalt.Mask = "0000000000";
             this.mmtxtTelefonoalt.MaxLength = 32767;
             this.mmtxtTelefonoalt.MouseState = MaterialSkin.MouseState.OUT;
             this.mmtxtTelefonoalt.Name = "mmtxtTelefonoalt";
             this.mmtxtTelefonoalt.PasswordChar = '\0';
             this.mmtxtTelefonoalt.PrefixSuffixText = null;
-            this.mmtxtTelefonoalt.PromptChar = '_';
+            this.mmtxtTelefonoalt.PromptChar = ' ';
             this.mmtxtTelefonoalt.ReadOnly = false;
             this.mmtxtTelefonoalt.RejectInputOnFirstFailure = false;
             this.mmtxtTelefonoalt.ResetOnPrompt = true;
@@ -365,6 +364,7 @@
             this.Mtxbx_Documento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Mtxbx_Documento.HidePromptOnLeave = false;
             this.Mtxbx_Documento.HideSelection = true;
+            this.Mtxbx_Documento.Hint = "Documento";
             this.Mtxbx_Documento.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.Mtxbx_Documento.LeadingIcon = null;
             this.Mtxbx_Documento.Location = new System.Drawing.Point(217, 30);
@@ -387,6 +387,7 @@
             this.Mtxbx_Documento.Size = new System.Drawing.Size(212, 48);
             this.Mtxbx_Documento.SkipLiterals = true;
             this.Mtxbx_Documento.TabIndex = 1;
+            this.Mtxbx_Documento.TabStop = false;
             this.Mtxbx_Documento.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Mtxbx_Documento.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.Mtxbx_Documento.TrailingIcon = null;
@@ -394,56 +395,12 @@
             this.Mtxbx_Documento.ValidatingType = null;
             this.Mtxbx_Documento.TextChanged += new System.EventHandler(this.Mtxbx_Nombre_TextChanged);
             // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(222, 81);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(83, 19);
-            this.materialLabel1.TabIndex = 13;
-            this.materialLabel1.Text = "Documento";
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.ForeColor = System.Drawing.Color.Black;
-            this.materialLabel2.Location = new System.Drawing.Point(27, 286);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(64, 19);
-            this.materialLabel2.TabIndex = 14;
-            this.materialLabel2.Text = "Teléfono";
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.ForeColor = System.Drawing.Color.Black;
-            this.materialLabel3.Location = new System.Drawing.Point(27, 427);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(143, 19);
-            this.materialLabel3.TabIndex = 15;
-            this.materialLabel3.Text = "Teléfono alternativo";
-            // 
             // AddClient
             // 
             this.AcceptButton = this.mbtnAgregarCliente;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 582);
-            this.Controls.Add(this.materialLabel3);
-            this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.Mtxbx_Documento);
             this.Controls.Add(this.mmtxtTelefonoalt);
             this.Controls.Add(this.mmtxtTelefono);
@@ -483,8 +440,5 @@
         private MaterialSkin.Controls.MaterialMaskedTextBox mmtxtTelefono;
         private MaterialSkin.Controls.MaterialMaskedTextBox mmtxtTelefonoalt;
         private MaterialSkin.Controls.MaterialMaskedTextBox Mtxbx_Documento;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
     }
 }

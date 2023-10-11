@@ -30,8 +30,6 @@ C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-fi
 C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.csproj.CoreCompileInputs.cache
 C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.exe
 C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.pdb
-C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\AppData\Database1.mdf
-C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\AppData\Database1_log.ldf
 C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Forms\Login- TalkLink.resx
 C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Forms\Login- TalkLink.cs
 C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Forms\Login- TalkLink.Designer.cs
@@ -65,3 +63,7 @@ C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-fi
 C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.ValueTuple.xml
 C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.csproj.CopyComplete
+C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\AppData\TLDatabase.mdf
+C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\AppData\TLDatabase_log.ldf
+C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Newtonsoft.Json.xml
