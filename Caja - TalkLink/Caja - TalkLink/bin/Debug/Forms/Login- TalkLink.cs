@@ -169,10 +169,5 @@ namespace Caja___TalkLink
             
             
         }
-
-        private void txtbx_Pass_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
