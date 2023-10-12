@@ -45,6 +45,8 @@
             this.MtxbxTelefono = new MaterialSkin.Controls.MaterialTextBox();
             this.MtxbxTelefonoAlt = new MaterialSkin.Controls.MaterialTextBox();
             this.Mtxbx_Documento = new MaterialSkin.Controls.MaterialTextBox();
+            this.dGVUsuarios = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // Mtxbx_Nombre
@@ -168,7 +170,7 @@
             this.materialDivider1.Location = new System.Drawing.Point(531, 12);
             this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(12, 535);
+            this.materialDivider1.Size = new System.Drawing.Size(12, 558);
             this.materialDivider1.TabIndex = 9;
             this.materialDivider1.Text = "materialDivider1";
             // 
@@ -259,7 +261,7 @@
             this.Mtxbx_TipoDocumento.MouseState = MaterialSkin.MouseState.OUT;
             this.Mtxbx_TipoDocumento.Name = "Mtxbx_TipoDocumento";
             this.Mtxbx_TipoDocumento.Size = new System.Drawing.Size(165, 49);
-            this.Mtxbx_TipoDocumento.StartIndex = -1;
+            this.Mtxbx_TipoDocumento.StartIndex = 0;
             this.Mtxbx_TipoDocumento.TabIndex = 0;
             this.Mtxbx_TipoDocumento.SelectedIndexChanged += new System.EventHandler(this.Mtxbx_TipoDocumento_SelectedIndexChanged);
             // 
@@ -322,12 +324,23 @@
             this.Mtxbx_Documento.TrailingIcon = null;
             this.Mtxbx_Documento.TextChanged += new System.EventHandler(this.Mtxbx_Nombre_TextChanged);
             // 
+            // dGVUsuarios
+            // 
+            this.dGVUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVUsuarios.Location = new System.Drawing.Point(575, 30);
+            this.dGVUsuarios.Name = "dGVUsuarios";
+            this.dGVUsuarios.RowHeadersWidth = 51;
+            this.dGVUsuarios.RowTemplate.Height = 24;
+            this.dGVUsuarios.Size = new System.Drawing.Size(571, 528);
+            this.dGVUsuarios.TabIndex = 17;
+            // 
             // AddClient
             // 
             this.AcceptButton = this.mbtnAgregarCliente;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 582);
+            this.ClientSize = new System.Drawing.Size(1177, 582);
+            this.Controls.Add(this.dGVUsuarios);
             this.Controls.Add(this.Mtxbx_Documento);
             this.Controls.Add(this.MtxbxTelefonoAlt);
             this.Controls.Add(this.MtxbxTelefono);
@@ -345,6 +358,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AddClient";
             this.Text = "Registro de usuario";
+            ((System.ComponentModel.ISupportInitialize)(this.dGVUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,5 +381,6 @@
         private MaterialSkin.Controls.MaterialTextBox MtxbxTelefono;
         private MaterialSkin.Controls.MaterialTextBox MtxbxTelefonoAlt;
         private MaterialSkin.Controls.MaterialTextBox Mtxbx_Documento;
+        private System.Windows.Forms.DataGridView dGVUsuarios;
     }
 }

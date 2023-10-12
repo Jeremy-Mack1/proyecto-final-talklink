@@ -163,10 +163,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Pagos.cs">
+    <Compile Include="Forms\Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pagos.Designer.cs">
+    <Compile Include="Forms\Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pagos.Designer.cs">
       <DependentUpon>Pagos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -197,6 +203,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <EmbeddedResource Include="Forms\ReporteCliente.rdlc" />
     <EntityDeploy Include="AppData\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -226,7 +233,10 @@
       <DependentUpon>Login- TalkLink.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pagos.resx">
+    <EmbeddedResource Include="Forms\Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pagos.resx">
       <DependentUpon>Pagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
