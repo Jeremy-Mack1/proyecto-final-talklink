@@ -38,7 +38,7 @@
             this.txtbxm_Descripcion = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.lblDescripcion = new MaterialSkin.Controls.MaterialLabel();
             this.lblMensajeError = new System.Windows.Forms.Label();
-            this.tLDatabaseDataSet = new Caja___TalkLink.TLDatabaseDataSet1();
+            this.tLDatabaseDataSet = new Caja___TalkLink.TLDatabaseDataSet();
             this.tLDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.servicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.servicosTableAdapter = new Caja___TalkLink.TLDatabaseDataSetTableAdapters.ServicosTableAdapter();
@@ -294,7 +294,7 @@
         private MaterialSkin.Controls.MaterialLabel lblDescripcion;
         private System.Windows.Forms.Label lblMensajeError;
         private System.Windows.Forms.BindingSource tLDatabaseDataSetBindingSource;
-        private TLDatabaseDataSet1 tLDatabaseDataSet;
+        private TLDatabaseDataSet tLDatabaseDataSet;
         private System.Windows.Forms.BindingSource servicosBindingSource;
         private TLDatabaseDataSetTableAdapters.ServicosTableAdapter servicosTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDServicioDataGridViewTextBoxColumn;

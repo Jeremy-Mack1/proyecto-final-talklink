@@ -49,14 +49,14 @@
             this.mbtn_EditarCliente = new MaterialSkin.Controls.MaterialButton();
             this.lblErrorClienteNoExiste = new System.Windows.Forms.Label();
             this.servicosTableAdapter = new Caja___TalkLink.TLDatabaseDataSetTableAdapters.ServicosTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.servicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dGVUsuarios = new System.Windows.Forms.DataGridView();
             this.iDServicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreServicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.servicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tLDatabaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -374,28 +374,23 @@
             // 
             this.servicosTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridView1
+            // dGVUsuarios
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dGVUsuarios.AllowUserToOrderColumns = true;
+            this.dGVUsuarios.AutoGenerateColumns = false;
+            this.dGVUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDServicioDataGridViewTextBoxColumn,
             this.nombreServicioDataGridViewTextBoxColumn,
             this.descripcionDataGridViewTextBoxColumn,
             this.montoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.servicosBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(614, 89);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(482, 410);
-            this.dataGridView1.TabIndex = 20;
-            // 
-            // servicosBindingSource
-            // 
-            this.servicosBindingSource.DataMember = "Servicos";
-            this.servicosBindingSource.DataSource = this.tLDatabaseDataSet;
+            this.dGVUsuarios.DataSource = this.servicosBindingSource;
+            this.dGVUsuarios.Location = new System.Drawing.Point(614, 89);
+            this.dGVUsuarios.Name = "dGVUsuarios";
+            this.dGVUsuarios.RowHeadersWidth = 51;
+            this.dGVUsuarios.RowTemplate.Height = 24;
+            this.dGVUsuarios.Size = new System.Drawing.Size(482, 410);
+            this.dGVUsuarios.TabIndex = 20;
             // 
             // iDServicioDataGridViewTextBoxColumn
             // 
@@ -430,6 +425,11 @@
             this.montoDataGridViewTextBoxColumn.Name = "montoDataGridViewTextBoxColumn";
             this.montoDataGridViewTextBoxColumn.Width = 125;
             // 
+            // servicosBindingSource
+            // 
+            this.servicosBindingSource.DataMember = "Servicos";
+            this.servicosBindingSource.DataSource = this.tLDatabaseDataSet;
+            // 
             // AddClient
             // 
             this.AcceptButton = this.mbtnAgregarCliente;
@@ -437,7 +437,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1179, 608);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dGVUsuarios);
             this.Controls.Add(this.lblErrorClienteNoExiste);
             this.Controls.Add(this.mbtn_EditarCliente);
             this.Controls.Add(this.Mtxbx_Documento);
@@ -459,7 +459,7 @@
             this.Text = "Registro de usuario";
             this.Load += new System.EventHandler(this.AddClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tLDatabaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -487,7 +487,7 @@
         private System.Windows.Forms.Label lblErrorClienteNoExiste;
         private TLDatabaseDataSet tLDatabaseDataSet;
         private TLDatabaseDataSetTableAdapters.ServicosTableAdapter servicosTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGVUsuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDServicioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreServicioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
