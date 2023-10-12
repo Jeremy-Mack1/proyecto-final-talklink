@@ -185,13 +185,14 @@ namespace Caja___TalkLink
                 // Recopila los datos ingresados por el usuario
                 string nombre = Mtxbx_Nombre.Text;
                 string apellido = Mtxbx_Apellido.Text;
-                string tipoDocumento = Mtxbx_TipoDocumento.Text;
+                int tipoDocumento = Mtxbx_TipoDocumento.SelectedIndex;
                 string documento = Mtxbx_Documento.Text;
                 string telefono = MtxbxTelefono.Text;
                 string telefonoAlt = MtxbxTelefonoAlt.Text;
                 string direccion = txtbx_Direccion.Text;
                 string estado = txtbx_Estado.Text;
                 string FechaNacimiento = Mtxbx_FechaNacimiento.Text;
+                string Sexo = genero;
 
                 string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Heine\\Documents\\Herdel Uni\\Proyecto Final - Desarrollo III\\proyecto-final-talklink\\Caja - TalkLink\\Caja - TalkLink\\AppData\\TLDatabase.mdf;Integrated Security=True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -215,7 +216,7 @@ namespace Caja___TalkLink
                         command.Parameters.AddWithValue("@Direccion", direccion);
                         command.Parameters.AddWithValue("@Estado", estado);
                         command.Parameters.AddWithValue("@FechaNacimiento", FechaNacimiento);
-                        command.Parameters.AddWithValue("@Sexo", genero);
+                        command.Parameters.AddWithValue("@Sexo", Sexo);
 
                         // Ejecuta el store procedure
                         command.ExecuteNonQuery();
@@ -224,6 +225,7 @@ namespace Caja___TalkLink
 
                 MessageBox.Show("Solicitud enviada con éxito", "Éxito", MessageBoxButtons.OK);
                 LimpiarControles(this);
+                genero = "";
             }
         }
 
@@ -234,7 +236,7 @@ namespace Caja___TalkLink
             string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Caja___TalkLink.Properties.Settings.TLDatabaseConnectionString"].ConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
-            using (SqlCommand command = new SqlCommand("sp_VerificarUsuario", connection))
+            using (SqlCommand command = new SqlCommand("sp_VerificarCliente", connection))
             {
                 connection.Open();
                 command.CommandType = CommandType.StoredProcedure;
@@ -250,8 +252,19 @@ namespace Caja___TalkLink
                             // El usuario existe, recupera los datos y muestra en los TextBox
                             Mtxbx_Nombre.Text = reader["Nombre"].ToString();
                             Mtxbx_Apellido.Text = reader["Apellido"].ToString();
-                            Mtxbx_TipoDocumento.Text = reader["TipoDocumento"].ToString();
+                            int tipoDocumentoRead = Convert.ToInt32(reader["TipoDocumento"]);
+
+                            if (tipoDocumentoRead == 0)
+                            {
+                                Mtxbx_TipoDocumento.SelectedIndex = 0; // Selecciona el primer elemento del ComboBox
+                            }
+                            else if (tipoDocumentoRead == 1)
+                            {
+                                Mtxbx_TipoDocumento.SelectedIndex = 1; // Selecciona el segundo elemento del ComboBox
+                            }
+
                             Mtxbx_Documento.Text = reader["Documento"].ToString();
+                            Mtxbx_FechaNacimiento.Text = reader["FechaNacimiento"].ToString();
                             MtxbxTelefono.Text = reader["Telefono"].ToString();
                             MtxbxTelefonoAlt.Text = reader["Telefonoalt"].ToString();
                             txtbx_Direccion.Text = reader["Direccion"].ToString();
@@ -293,7 +306,7 @@ namespace Caja___TalkLink
 
             if (UsuarioExiste(tipoDocumento, documento))
             {
-                // El usuario existe, puedes habilitar el botón de "Editar Cliente"
+                
                 mbtn_EditarCliente.Enabled = true;
                 lblErrorClienteNoExiste.Visible = false;
             }
