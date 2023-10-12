@@ -67,3 +67,4 @@ C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-fi
 C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\AppData\TLDatabase_log.ldf
 C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Enger González\OneDrive - INTEC\Escritorio\GitHub\TalkLink\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja___TalkLink.Forms.Reportes.resources

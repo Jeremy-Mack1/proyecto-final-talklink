@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Caja___TalkLink.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -274,17 +275,29 @@ namespace Caja___TalkLink
 
         private void btn_Servicios_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Servicios(), sender);
+        }
+
+        private void btn_Pagos_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Pagos(), sender);
         }
 
         private void btn_Reportes_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Reportes(), sender);
         }
 
         private void btn_LogOut_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            DialogResult result = MessageBox.Show("¿Estás seguro que deseas desconectarse?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Login__TalkLink loginForm = new Login__TalkLink();
+                loginForm.Show();
+                this.Hide();
+            }
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

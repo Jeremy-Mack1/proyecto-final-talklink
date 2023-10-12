@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.btn_Reportes = new FontAwesome.Sharp.IconButton();
             this.btn_LogOut = new FontAwesome.Sharp.IconButton();
             this.btn_Pagos = new FontAwesome.Sharp.IconButton();
             this.btn_Servicios = new FontAwesome.Sharp.IconButton();
@@ -63,7 +64,6 @@
             this.lbl_DineroEnCaja = new System.Windows.Forms.Label();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.CloseTimer = new System.Windows.Forms.Timer(this.components);
-            this.btn_Reportes = new FontAwesome.Sharp.IconButton();
             this.PanelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +91,28 @@
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(230, 509);
             this.PanelMenu.TabIndex = 0;
+            // 
+            // btn_Reportes
+            // 
+            this.btn_Reportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Reportes.FlatAppearance.BorderSize = 0;
+            this.btn_Reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reportes.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reportes.ForeColor = System.Drawing.Color.White;
+            this.btn_Reportes.IconChar = FontAwesome.Sharp.IconChar.File;
+            this.btn_Reportes.IconColor = System.Drawing.Color.White;
+            this.btn_Reportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Reportes.IconSize = 30;
+            this.btn_Reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Reportes.Location = new System.Drawing.Point(0, 316);
+            this.btn_Reportes.Name = "btn_Reportes";
+            this.btn_Reportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_Reportes.Size = new System.Drawing.Size(230, 54);
+            this.btn_Reportes.TabIndex = 6;
+            this.btn_Reportes.Tag = "Reportes";
+            this.btn_Reportes.Text = "   Reportes";
+            this.btn_Reportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Reportes.UseVisualStyleBackColor = true;
             // 
             // btn_LogOut
             // 
@@ -136,7 +158,7 @@
             this.btn_Pagos.Text = "   Pagos";
             this.btn_Pagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Pagos.UseVisualStyleBackColor = true;
-            this.btn_Pagos.Click += new System.EventHandler(this.btn_Reportes_Click);
+            this.btn_Pagos.Click += new System.EventHandler(this.btn_Pagos_Click);
             // 
             // btn_Servicios
             // 
@@ -369,7 +391,6 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(915, 449);
             this.panelDesktop.TabIndex = 2;
-            
             // 
             // panel4
             // 
@@ -533,28 +554,6 @@
             this.CloseTimer.Enabled = true;
             this.CloseTimer.Interval = 1000;
             this.CloseTimer.Tick += new System.EventHandler(this.CloseTimer_Tick);
-            // 
-            // btn_Reportes
-            // 
-            this.btn_Reportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Reportes.FlatAppearance.BorderSize = 0;
-            this.btn_Reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Reportes.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reportes.ForeColor = System.Drawing.Color.White;
-            this.btn_Reportes.IconChar = FontAwesome.Sharp.IconChar.File;
-            this.btn_Reportes.IconColor = System.Drawing.Color.White;
-            this.btn_Reportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Reportes.IconSize = 30;
-            this.btn_Reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Reportes.Location = new System.Drawing.Point(0, 316);
-            this.btn_Reportes.Name = "btn_Reportes";
-            this.btn_Reportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_Reportes.Size = new System.Drawing.Size(230, 54);
-            this.btn_Reportes.TabIndex = 6;
-            this.btn_Reportes.Tag = "Reportes";
-            this.btn_Reportes.Text = "   Reportes";
-            this.btn_Reportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Reportes.UseVisualStyleBackColor = true;
             // 
             // Default
             // 

@@ -93,7 +93,6 @@
             this.txtbx_Pass.Size = new System.Drawing.Size(328, 21);
             this.txtbx_Pass.TabIndex = 2;
             this.txtbx_Pass.Text = "Contraseña";
-            this.txtbx_Pass.TextChanged += new System.EventHandler(this.txtbx_Pass_TextChanged);
             this.txtbx_Pass.Enter += new System.EventHandler(this.txtbx_Pass_Enter);
             this.txtbx_Pass.Leave += new System.EventHandler(this.txtbx_Pass_Leave);
             // 
@@ -184,7 +183,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(33)))), ((int)(((byte)(121)))));
-            this.ClientSize = new System.Drawing.Size(966, 396);
+            this.ClientSize = new System.Drawing.Size(1007, 396);
             this.Controls.Add(this.pb_NoVisible);
             this.Controls.Add(this.pb_Minimizar);
             this.Controls.Add(this.pb_Cerrar);

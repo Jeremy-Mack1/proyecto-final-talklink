@@ -83,7 +83,7 @@
             this.btn_verify.Depth = 0;
             this.btn_verify.HighEmphasis = true;
             this.btn_verify.Icon = null;
-            this.btn_verify.Location = new System.Drawing.Point(271, 172);
+            this.btn_verify.Location = new System.Drawing.Point(271, 174);
             this.btn_verify.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_verify.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_verify.Name = "btn_verify";
@@ -121,7 +121,7 @@
             this.materialListBox1.Name = "materialListBox1";
             this.materialListBox1.SelectedIndex = -1;
             this.materialListBox1.SelectedItem = null;
-            this.materialListBox1.Size = new System.Drawing.Size(369, 259);
+            this.materialListBox1.Size = new System.Drawing.Size(369, 272);
             this.materialListBox1.TabIndex = 8;
             // 
             // MCBTipoDocumento
@@ -215,7 +215,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(662, 325);
+            this.label1.Location = new System.Drawing.Point(605, 325);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 16);
             this.label1.TabIndex = 15;
@@ -224,7 +224,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(633, 423);
+            this.label2.Location = new System.Drawing.Point(576, 423);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 16);
             this.label2.TabIndex = 16;
@@ -238,7 +238,7 @@
             this.MBtnConfirmarPago.Enabled = false;
             this.MBtnConfirmarPago.HighEmphasis = true;
             this.MBtnConfirmarPago.Icon = null;
-            this.MBtnConfirmarPago.Location = new System.Drawing.Point(547, 501);
+            this.MBtnConfirmarPago.Location = new System.Drawing.Point(488, 522);
             this.MBtnConfirmarPago.Margin = new System.Windows.Forms.Padding(8, 6, 4, 6);
             this.MBtnConfirmarPago.MouseState = MaterialSkin.MouseState.HOVER;
             this.MBtnConfirmarPago.Name = "MBtnConfirmarPago";
@@ -255,7 +255,7 @@
             // 
             this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(271, 217);
+            this.materialDivider1.Location = new System.Drawing.Point(270, 231);
             this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider1.Name = "materialDivider1";
             this.materialDivider1.Size = new System.Drawing.Size(485, 10);
