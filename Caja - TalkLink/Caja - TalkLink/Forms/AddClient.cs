@@ -198,7 +198,7 @@ namespace Caja___TalkLink
 
         private bool UsuarioExiste(string tipoDocumento, string documento)
         {
-            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["TLDatabase"].ConnectionString;
+            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Caja___TalkLink.Properties.Settings.TLDatabaseConnectionString"].ConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand("sp_VerificarUsuario", connection))
@@ -235,10 +235,13 @@ namespace Caja___TalkLink
                             MRB_Femenino.Checked = true;
                         }
 
+                        
                         return true; // Usuario encontrado
+                        
                     }
                     // Si el usuario no se encontró en la base de datos, retorna false.
                     return false;
+                    
                 }
             }
         }
@@ -252,11 +255,11 @@ namespace Caja___TalkLink
             {
                 // El usuario existe, puedes habilitar el botón de "Editar Cliente"
                 mbtn_EditarCliente.Enabled = true;
+                lblErrorClienteNoExiste.Visible = false;
             }
             else
             {
-                // El usuario no existe, puedes mostrar un mensaje o realizar otras acciones
-                MessageBox.Show("El usuario no existe en la base de datos.");
+                lblErrorClienteNoExiste.Visible = true;
             }
 
         }

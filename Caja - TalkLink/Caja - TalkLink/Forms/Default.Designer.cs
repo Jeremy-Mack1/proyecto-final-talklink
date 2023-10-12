@@ -89,7 +89,7 @@
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(230, 509);
+            this.PanelMenu.Size = new System.Drawing.Size(230, 591);
             this.PanelMenu.TabIndex = 0;
             // 
             // btn_Reportes
@@ -126,7 +126,7 @@
             this.btn_LogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_LogOut.IconSize = 30;
             this.btn_LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LogOut.Location = new System.Drawing.Point(0, 455);
+            this.btn_LogOut.Location = new System.Drawing.Point(0, 537);
             this.btn_LogOut.Name = "btn_LogOut";
             this.btn_LogOut.Padding = new System.Windows.Forms.Padding(10, 0, 0, 15);
             this.btn_LogOut.Size = new System.Drawing.Size(230, 54);
@@ -286,7 +286,7 @@
             this.panelCornerIcons.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCornerIcons.Location = new System.Drawing.Point(230, 0);
             this.panelCornerIcons.Name = "panelCornerIcons";
-            this.panelCornerIcons.Size = new System.Drawing.Size(915, 60);
+            this.panelCornerIcons.Size = new System.Drawing.Size(1051, 60);
             this.panelCornerIcons.TabIndex = 1;
             this.panelCornerIcons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelCornerIcons_MouseDown);
             // 
@@ -297,7 +297,7 @@
             this.Panel_CornerIcons.Controls.Add(this.btn_Minimizar);
             this.Panel_CornerIcons.Controls.Add(this.btn_Mazimizar);
             this.Panel_CornerIcons.Controls.Add(this.btn_Exit);
-            this.Panel_CornerIcons.Location = new System.Drawing.Point(769, 11);
+            this.Panel_CornerIcons.Location = new System.Drawing.Point(905, 11);
             this.Panel_CornerIcons.Name = "Panel_CornerIcons";
             this.Panel_CornerIcons.Size = new System.Drawing.Size(134, 35);
             this.Panel_CornerIcons.TabIndex = 0;
@@ -389,7 +389,7 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(230, 60);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(915, 449);
+            this.panelDesktop.Size = new System.Drawing.Size(1051, 531);
             this.panelDesktop.TabIndex = 2;
             // 
             // panel4
@@ -559,7 +559,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 509);
+            this.ClientSize = new System.Drawing.Size(1281, 591);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelCornerIcons);
             this.Controls.Add(this.PanelMenu);

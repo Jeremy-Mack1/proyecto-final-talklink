@@ -47,6 +47,7 @@
             this.Mtxbx_Documento = new MaterialSkin.Controls.MaterialTextBox();
             this.dGVUsuarios = new System.Windows.Forms.DataGridView();
             this.mbtn_EditarCliente = new MaterialSkin.Controls.MaterialButton();
+            this.lblErrorClienteNoExiste = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dGVUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -349,12 +350,23 @@
             this.mbtn_EditarCliente.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbtn_EditarCliente.Name = "mbtn_EditarCliente";
             this.mbtn_EditarCliente.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.mbtn_EditarCliente.Size = new System.Drawing.Size(150, 36);
+            this.mbtn_EditarCliente.Size = new System.Drawing.Size(133, 36);
             this.mbtn_EditarCliente.TabIndex = 18;
             this.mbtn_EditarCliente.Text = "Editar Cliente";
             this.mbtn_EditarCliente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.mbtn_EditarCliente.UseAccentColor = false;
             this.mbtn_EditarCliente.UseVisualStyleBackColor = true;
+            // 
+            // lblErrorClienteNoExiste
+            // 
+            this.lblErrorClienteNoExiste.AutoSize = true;
+            this.lblErrorClienteNoExiste.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorClienteNoExiste.Location = new System.Drawing.Point(158, 108);
+            this.lblErrorClienteNoExiste.Name = "lblErrorClienteNoExiste";
+            this.lblErrorClienteNoExiste.Size = new System.Drawing.Size(128, 17);
+            this.lblErrorClienteNoExiste.TabIndex = 19;
+            this.lblErrorClienteNoExiste.Text = "El Cliente no existe";
+            this.lblErrorClienteNoExiste.Visible = false;
             // 
             // AddClient
             // 
@@ -363,6 +375,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1177, 582);
+            this.Controls.Add(this.lblErrorClienteNoExiste);
             this.Controls.Add(this.mbtn_EditarCliente);
             this.Controls.Add(this.dGVUsuarios);
             this.Controls.Add(this.Mtxbx_Documento);
@@ -407,5 +420,6 @@
         private MaterialSkin.Controls.MaterialTextBox Mtxbx_Documento;
         private System.Windows.Forms.DataGridView dGVUsuarios;
         private MaterialSkin.Controls.MaterialButton mbtn_EditarCliente;
+        private System.Windows.Forms.Label lblErrorClienteNoExiste;
     }
 }
