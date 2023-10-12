@@ -36,6 +36,7 @@
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.txtbxm_Descripcion = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.lblDescripcion = new MaterialSkin.Controls.MaterialLabel();
+            this.lblMensajeError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dGVUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             // dGVUsuarios
             // 
             this.dGVUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVUsuarios.Location = new System.Drawing.Point(377, 98);
+            this.dGVUsuarios.Location = new System.Drawing.Point(377, 110);
             this.dGVUsuarios.Name = "dGVUsuarios";
             this.dGVUsuarios.RowHeadersWidth = 51;
             this.dGVUsuarios.RowTemplate.Height = 24;
@@ -120,6 +121,7 @@
             this.mbtnAgregaServicio.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.mbtnAgregaServicio.UseAccentColor = false;
             this.mbtnAgregaServicio.UseVisualStyleBackColor = true;
+            this.mbtnAgregaServicio.Click += new System.EventHandler(this.mbtnAgregaServicio_Click);
             // 
             // materialButton2
             // 
@@ -168,11 +170,23 @@
             this.lblDescripcion.TabIndex = 19;
             this.lblDescripcion.Text = "Descripción";
             // 
+            // lblMensajeError
+            // 
+            this.lblMensajeError.AutoSize = true;
+            this.lblMensajeError.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensajeError.ForeColor = System.Drawing.Color.Red;
+            this.lblMensajeError.Location = new System.Drawing.Point(386, 78);
+            this.lblMensajeError.Name = "lblMensajeError";
+            this.lblMensajeError.Size = new System.Drawing.Size(280, 17);
+            this.lblMensajeError.TabIndex = 20;
+            this.lblMensajeError.Text = "Este servicio ya existe en la base de datos.";
+            // 
             // Servicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(935, 485);
+            this.Controls.Add(this.lblMensajeError);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtbxm_Descripcion);
             this.Controls.Add(this.materialButton2);
@@ -199,5 +213,6 @@
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSkin.Controls.MaterialMultiLineTextBox txtbxm_Descripcion;
         private MaterialSkin.Controls.MaterialLabel lblDescripcion;
+        private System.Windows.Forms.Label lblMensajeError;
     }
 }

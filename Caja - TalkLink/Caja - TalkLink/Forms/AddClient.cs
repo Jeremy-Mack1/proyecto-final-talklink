@@ -20,6 +20,10 @@ namespace Caja___TalkLink
         public AddClient()
         {
             InitializeComponent();
+            mbtnAgregarCliente.Enabled = false;
+            mbtn_EditarCliente.Enabled = false;
+
+
         }
 
         #region Validaciones
@@ -52,17 +56,46 @@ namespace Caja___TalkLink
         private void HabilitarBoton()
         {
             bool camposCompletos = Mtxbx_TipoDocumento.SelectedIndex != -1 &&
-                                   Mtxbx_Documento.Text.Length == Mtxbx_Documento.MaxLength &&
-                                   !string.IsNullOrWhiteSpace(Mtxbx_Nombre.Text) &&
-                                   !string.IsNullOrWhiteSpace(Mtxbx_Apellido.Text) &&
-                                   EsFechaValida(Mtxbx_FechaNacimiento.Text) &&
-                                   MtxbxTelefono.Text.Length == MtxbxTelefono.MaxLength &&
-                                   MtxbxTelefonoAlt.Text.Length == MtxbxTelefonoAlt.MaxLength &&
-                                   !string.IsNullOrWhiteSpace(txtbx_Direccion.Text) &&
-                                   !string.IsNullOrWhiteSpace(txtbx_Estado.Text) &&
-                                   (MRB_Masculino.Checked || MRB_Femenino.Checked);
+                        !string.IsNullOrWhiteSpace(Mtxbx_Nombre.Text) &&
+                        !string.IsNullOrWhiteSpace(Mtxbx_Apellido.Text) &&
+                        EsFechaValida(Mtxbx_FechaNacimiento.Text) &&
+                        MtxbxTelefono.Text.Length == MtxbxTelefono.MaxLength &&
+                        MtxbxTelefonoAlt.Text.Length == MtxbxTelefonoAlt.MaxLength &&
+                        !string.IsNullOrWhiteSpace(txtbx_Direccion.Text) &&
+                        !string.IsNullOrWhiteSpace(txtbx_Estado.Text) &&
+                        (MRB_Masculino.Checked || MRB_Femenino.Checked);
+
+            if (Mtxbx_TipoDocumento.SelectedIndex == 0)
+            {
+                camposCompletos = camposCompletos && (Mtxbx_Documento.Text.Length == 11);
+            }
+            else if (Mtxbx_TipoDocumento.SelectedIndex == 1)
+            {
+                camposCompletos = camposCompletos && (Mtxbx_Documento.Text.Length == 9);
+            }
 
             mbtnAgregarCliente.Enabled = camposCompletos;
+            mbtn_EditarCliente.Enabled = camposCompletos;
+
+
+        }
+
+        private void Mtxbx_Documento_TextChanged(object sender, EventArgs e)
+        {
+            // Verifica si el campo Mtxbx_Documento tiene la longitud máxima adecuada para el tipo de documento seleccionado
+            if (Mtxbx_TipoDocumento.SelectedIndex == 0 && Mtxbx_Documento.Text.Length == 11)
+            {
+                HabilitarBoton();
+            }
+            else if (Mtxbx_TipoDocumento.SelectedIndex == 1 && Mtxbx_Documento.Text.Length == 9)
+            {
+                HabilitarBoton();
+            }
+            else
+            {
+                mbtnAgregarCliente.Enabled = false;
+                mbtn_EditarCliente.Enabled = false;
+            }
         }
 
         private bool EsFechaValida(string fechaStr)
@@ -210,41 +243,48 @@ namespace Caja___TalkLink
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    if (reader.Read())
+                    try
                     {
-                        // El usuario existe, recupera los datos y muestra en los TextBox
-                        Mtxbx_Nombre.Text = reader["Nombre"].ToString();
-                        Mtxbx_Apellido.Text = reader["Apellido"].ToString();
-                        Mtxbx_TipoDocumento.Text = reader["TipoDocumento"].ToString();
-                        Mtxbx_Documento.Text = reader["Documento"].ToString();
-                        MtxbxTelefono.Text = reader["Telefono"].ToString();
-                        MtxbxTelefonoAlt.Text = reader["Telefonoalt"].ToString();
-                        txtbx_Direccion.Text = reader["Direccion"].ToString();
-                        txtbx_Estado.Text = reader["Estado"].ToString();
-
-                        // Recupera el valor del género
-                        string genero = reader["Genero"].ToString();
-
-                        // Asigna el valor del género a los RadioButton
-                        if (genero == "Masculino")
+                        if (reader.Read())
                         {
-                            MRB_Masculino.Checked = true;
-                        }
-                        else if (genero == "Femenino")
-                        {
-                            MRB_Femenino.Checked = true;
-                        }
+                            // El usuario existe, recupera los datos y muestra en los TextBox
+                            Mtxbx_Nombre.Text = reader["Nombre"].ToString();
+                            Mtxbx_Apellido.Text = reader["Apellido"].ToString();
+                            Mtxbx_TipoDocumento.Text = reader["TipoDocumento"].ToString();
+                            Mtxbx_Documento.Text = reader["Documento"].ToString();
+                            MtxbxTelefono.Text = reader["Telefono"].ToString();
+                            MtxbxTelefonoAlt.Text = reader["Telefonoalt"].ToString();
+                            txtbx_Direccion.Text = reader["Direccion"].ToString();
+                            txtbx_Estado.Text = reader["Estado"].ToString();
 
-                        
-                        return true; // Usuario encontrado
-                        
+                            // Recupera el valor del género
+                            string genero = reader["Genero"].ToString();
+
+                            // Asigna el valor del género a los RadioButton
+                            if (genero == "Masculino")
+                            {
+                                MRB_Masculino.Checked = true;
+                                MRB_Femenino.Checked = false;
+                            }
+                            else if (genero == "Femenino")
+                            {
+                                MRB_Masculino.Checked = false;
+                                MRB_Femenino.Checked = true;
+                            }
+
+                            return true; // Usuario encontrado
+                        }
+                        // Si el usuario no se encontró en la base de datos, retorna false.
+                        return false;
                     }
-                    // Si el usuario no se encontró en la base de datos, retorna false.
-                    return false;
-                    
+                    finally
+                    {
+                        reader.Close(); // Cierra el SqlDataReader en el bloque finally
+                    }
                 }
             }
         }
+
 
         private void mbtnConsultar_Click(object sender, EventArgs e)
         {

@@ -149,7 +149,6 @@
             this.mbtnAgregarCliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mbtnAgregarCliente.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.mbtnAgregarCliente.Depth = 0;
-            this.mbtnAgregarCliente.Enabled = false;
             this.mbtnAgregarCliente.HighEmphasis = true;
             this.mbtnAgregarCliente.Icon = null;
             this.mbtnAgregarCliente.Location = new System.Drawing.Point(78, 522);
@@ -277,7 +276,7 @@
             this.MtxbxTelefono.Hint = "Teléfono";
             this.MtxbxTelefono.LeadingIcon = null;
             this.MtxbxTelefono.Location = new System.Drawing.Point(34, 310);
-            this.MtxbxTelefono.MaxLength = 9;
+            this.MtxbxTelefono.MaxLength = 10;
             this.MtxbxTelefono.MouseState = MaterialSkin.MouseState.OUT;
             this.MtxbxTelefono.Multiline = false;
             this.MtxbxTelefono.Name = "MtxbxTelefono";
@@ -297,7 +296,7 @@
             this.MtxbxTelefonoAlt.Hint = "Teléfono Alternativo";
             this.MtxbxTelefonoAlt.LeadingIcon = null;
             this.MtxbxTelefonoAlt.Location = new System.Drawing.Point(34, 374);
-            this.MtxbxTelefonoAlt.MaxLength = 9;
+            this.MtxbxTelefonoAlt.MaxLength = 10;
             this.MtxbxTelefonoAlt.MouseState = MaterialSkin.MouseState.OUT;
             this.MtxbxTelefonoAlt.Multiline = false;
             this.MtxbxTelefonoAlt.Name = "MtxbxTelefonoAlt";
@@ -342,7 +341,6 @@
             this.mbtn_EditarCliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mbtn_EditarCliente.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.mbtn_EditarCliente.Depth = 0;
-            this.mbtn_EditarCliente.Enabled = false;
             this.mbtn_EditarCliente.HighEmphasis = true;
             this.mbtn_EditarCliente.Icon = null;
             this.mbtn_EditarCliente.Location = new System.Drawing.Point(289, 522);
@@ -374,7 +372,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1177, 582);
+            this.ClientSize = new System.Drawing.Size(1179, 608);
             this.Controls.Add(this.lblErrorClienteNoExiste);
             this.Controls.Add(this.mbtn_EditarCliente);
             this.Controls.Add(this.dGVUsuarios);
