@@ -169,6 +169,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TLDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TLDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TLDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <None Include="Resources\money-management.png" />
@@ -231,6 +236,17 @@
     </None>
     <None Include="AppData\TLDatabaseDataSet.xss">
       <DependentUpon>TLDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TLDatabaseDataSet1.xsc">
+      <DependentUpon>TLDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TLDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TLDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TLDatabaseDataSet1.xss">
+      <DependentUpon>TLDatabaseDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

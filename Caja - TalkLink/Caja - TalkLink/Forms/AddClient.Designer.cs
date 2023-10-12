@@ -45,10 +45,19 @@
             this.MtxbxTelefono = new MaterialSkin.Controls.MaterialTextBox();
             this.MtxbxTelefonoAlt = new MaterialSkin.Controls.MaterialTextBox();
             this.Mtxbx_Documento = new MaterialSkin.Controls.MaterialTextBox();
-            this.dGVUsuarios = new System.Windows.Forms.DataGridView();
+            this.tLDatabaseDataSet = new Caja___TalkLink.TLDatabaseDataSet();
             this.mbtn_EditarCliente = new MaterialSkin.Controls.MaterialButton();
             this.lblErrorClienteNoExiste = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVUsuarios)).BeginInit();
+            this.servicosTableAdapter = new Caja___TalkLink.TLDatabaseDataSetTableAdapters.ServicosTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.servicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDServicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreServicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.montoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.tLDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Mtxbx_Nombre
@@ -326,15 +335,10 @@
             this.Mtxbx_Documento.TrailingIcon = null;
             this.Mtxbx_Documento.TextChanged += new System.EventHandler(this.Mtxbx_Nombre_TextChanged);
             // 
-            // dGVUsuarios
+            // tLDatabaseDataSet
             // 
-            this.dGVUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVUsuarios.Location = new System.Drawing.Point(575, 30);
-            this.dGVUsuarios.Name = "dGVUsuarios";
-            this.dGVUsuarios.RowHeadersWidth = 51;
-            this.dGVUsuarios.RowTemplate.Height = 24;
-            this.dGVUsuarios.Size = new System.Drawing.Size(571, 528);
-            this.dGVUsuarios.TabIndex = 17;
+            this.tLDatabaseDataSet.DataSetName = "TLDatabaseDataSet";
+            this.tLDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // mbtn_EditarCliente
             // 
@@ -366,6 +370,66 @@
             this.lblErrorClienteNoExiste.Text = "El Cliente no existe";
             this.lblErrorClienteNoExiste.Visible = false;
             // 
+            // servicosTableAdapter
+            // 
+            this.servicosTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDServicioDataGridViewTextBoxColumn,
+            this.nombreServicioDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.montoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.servicosBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(614, 89);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(482, 410);
+            this.dataGridView1.TabIndex = 20;
+            // 
+            // servicosBindingSource
+            // 
+            this.servicosBindingSource.DataMember = "Servicos";
+            this.servicosBindingSource.DataSource = this.tLDatabaseDataSet;
+            // 
+            // iDServicioDataGridViewTextBoxColumn
+            // 
+            this.iDServicioDataGridViewTextBoxColumn.DataPropertyName = "IDServicio";
+            this.iDServicioDataGridViewTextBoxColumn.HeaderText = "IDServicio";
+            this.iDServicioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDServicioDataGridViewTextBoxColumn.Name = "iDServicioDataGridViewTextBoxColumn";
+            this.iDServicioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDServicioDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nombreServicioDataGridViewTextBoxColumn
+            // 
+            this.nombreServicioDataGridViewTextBoxColumn.DataPropertyName = "NombreServicio";
+            this.nombreServicioDataGridViewTextBoxColumn.HeaderText = "NombreServicio";
+            this.nombreServicioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreServicioDataGridViewTextBoxColumn.Name = "nombreServicioDataGridViewTextBoxColumn";
+            this.nombreServicioDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // montoDataGridViewTextBoxColumn
+            // 
+            this.montoDataGridViewTextBoxColumn.DataPropertyName = "Monto";
+            this.montoDataGridViewTextBoxColumn.HeaderText = "Monto";
+            this.montoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.montoDataGridViewTextBoxColumn.Name = "montoDataGridViewTextBoxColumn";
+            this.montoDataGridViewTextBoxColumn.Width = 125;
+            // 
             // AddClient
             // 
             this.AcceptButton = this.mbtnAgregarCliente;
@@ -373,9 +437,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1179, 608);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblErrorClienteNoExiste);
             this.Controls.Add(this.mbtn_EditarCliente);
-            this.Controls.Add(this.dGVUsuarios);
             this.Controls.Add(this.Mtxbx_Documento);
             this.Controls.Add(this.MtxbxTelefonoAlt);
             this.Controls.Add(this.MtxbxTelefono);
@@ -393,7 +457,10 @@
             this.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AddClient";
             this.Text = "Registro de usuario";
-            ((System.ComponentModel.ISupportInitialize)(this.dGVUsuarios)).EndInit();
+            this.Load += new System.EventHandler(this.AddClient_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tLDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,8 +483,15 @@
         private MaterialSkin.Controls.MaterialTextBox MtxbxTelefono;
         private MaterialSkin.Controls.MaterialTextBox MtxbxTelefonoAlt;
         private MaterialSkin.Controls.MaterialTextBox Mtxbx_Documento;
-        private System.Windows.Forms.DataGridView dGVUsuarios;
         private MaterialSkin.Controls.MaterialButton mbtn_EditarCliente;
         private System.Windows.Forms.Label lblErrorClienteNoExiste;
+        private TLDatabaseDataSet tLDatabaseDataSet;
+        private TLDatabaseDataSetTableAdapters.ServicosTableAdapter servicosTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDServicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreServicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn montoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource servicosBindingSource;
     }
 }

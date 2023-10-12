@@ -15,6 +15,7 @@ namespace Caja___TalkLink
     public partial class AddClient : Form
     {
         //Fields
+        private string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Caja___TalkLink.Properties.Settings.TLDatabaseConnectionString"].ConnectionString;
 
         private string genero = "";
         public AddClient()
@@ -180,6 +181,24 @@ namespace Caja___TalkLink
         }
         private void mbtnAgregarCliente_Click(object sender, EventArgs e)
         {
+            // Verifica si al menos un servicio está seleccionado.
+            bool alMenosUnServicioSeleccionado = false;
+
+            foreach (DataGridViewRow row in dGVUsuarios.Rows)
+            {
+                bool seleccionado = Convert.ToBoolean(row.Cells["ColumnaSeleccion"].Value);
+                if (seleccionado)
+                {
+                    alMenosUnServicioSeleccionado = true;
+                    break;
+                }
+            }
+
+            if (!alMenosUnServicioSeleccionado)
+            {
+                MessageBox.Show("Selecciona al menos un servicio antes de agregar el cliente.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (MessageBox.Show("¿Estás seguro?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // Recopila los datos ingresados por el usuario
@@ -194,18 +213,67 @@ namespace Caja___TalkLink
                 string FechaNacimiento = Mtxbx_FechaNacimiento.Text;
                 string Sexo = genero;
 
-                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Heine\\Documents\\Herdel Uni\\Proyecto Final - Desarrollo III\\proyecto-final-talklink\\Caja - TalkLink\\Caja - TalkLink\\AppData\\TLDatabase.mdf;Integrated Security=True";
-                using (SqlConnection connection = new SqlConnection(connectionString))
+
+                // Recopila las selecciones de servicios hechas por el cliente
+                List<int> serviciosSeleccionados = new List<int>();
+                foreach (DataGridViewRow row in dGVUsuarios.Rows)
+                {
+                    // Verifica si el servicio está seleccionado en el DataGridView (ajusta esto según tu implementación).
+                    bool seleccionado = Convert.ToBoolean(row.Cells["ColumnaSeleccion"].Value);
+                    if (seleccionado)
+                    {
+                        serviciosSeleccionados.Add(row.Index); // Puedes usar row.Index como una identificación única
+                    }
+                }
+
+                // Inserta el cliente en la tabla "Clientes" y obtén el ID del cliente recién insertado.
+                InsertarCliente(nombre, apellido, tipoDocumento, documento, telefono, telefonoAlt, direccion, estado, FechaNacimiento, Sexo);
+
+                // Inserta las asociaciones de servicios seleccionados con el cliente en la tabla "ClienteServicios"
+                foreach (int idServicio in serviciosSeleccionados)
+                {
+                    InsertarClienteServicios(documento, idServicio);
+                }
+
+                MessageBox.Show("Solicitud enviada con éxito", "Éxito", MessageBoxButtons.OK);
+                LimpiarControles(this);
+                genero = "";
+            }
+        }
+
+        private void InsertarClienteServicios(string documento, int idServicio)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
                 {
                     connection.Open();
-
-                    // Define el nombre del store procedure
-                    string spName = "sp_UpsertCliente";
-
-                    using (SqlCommand command = new SqlCommand(spName, connection))
+                    using (SqlCommand command = new SqlCommand("sp_InsertarClienteServicio", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@Documento", documento); // Usa el documento en lugar del ID del cliente
+                        command.Parameters.AddWithValue("@IDServicio", idServicio);
+                        command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de errores
+                    MessageBox.Show("Error al insertar cliente-servicio: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
 
+        private void InsertarCliente(string nombre, string apellido, int tipoDocumento, string documento, string telefono, string telefonoAlt, string direccion, string estado, string FechaNacimiento, string Sexo)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand("sp_UpsertCliente", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
                         // Asigna los parámetros con los valores recopilados
                         command.Parameters.AddWithValue("@Nombre", nombre);
                         command.Parameters.AddWithValue("@Apellido", apellido);
@@ -222,12 +290,15 @@ namespace Caja___TalkLink
                         command.ExecuteNonQuery();
                     }
                 }
-
-                MessageBox.Show("Solicitud enviada con éxito", "Éxito", MessageBoxButtons.OK);
-                LimpiarControles(this);
-                genero = "";
+                catch (Exception ex)
+                {
+                    // Manejo de errores
+                    MessageBox.Show("Error al insertar cliente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+
+
 
         #endregion
 
@@ -236,7 +307,7 @@ namespace Caja___TalkLink
             string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Caja___TalkLink.Properties.Settings.TLDatabaseConnectionString"].ConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
-            using (SqlCommand command = new SqlCommand("sp_VerificarCliente", connection))
+            using (SqlCommand command = new SqlCommand("sp_BuscarCliente", connection))
             {
                 connection.Open();
                 command.CommandType = CommandType.StoredProcedure;
@@ -252,17 +323,16 @@ namespace Caja___TalkLink
                             // El usuario existe, recupera los datos y muestra en los TextBox
                             Mtxbx_Nombre.Text = reader["Nombre"].ToString();
                             Mtxbx_Apellido.Text = reader["Apellido"].ToString();
-                            int tipoDocumentoRead = Convert.ToInt32(reader["TipoDocumento"]);
+                            string tipoDocumentoRead = reader["TipoDocumento"].ToString();
 
-                            if (tipoDocumentoRead == 0)
+                            if (tipoDocumentoRead == "0")
                             {
                                 Mtxbx_TipoDocumento.SelectedIndex = 0; // Selecciona el primer elemento del ComboBox
                             }
-                            else if (tipoDocumentoRead == 1)
+                            else if (tipoDocumentoRead == "1")
                             {
                                 Mtxbx_TipoDocumento.SelectedIndex = 1; // Selecciona el segundo elemento del ComboBox
                             }
-
                             Mtxbx_Documento.Text = reader["Documento"].ToString();
                             Mtxbx_FechaNacimiento.Text = reader["FechaNacimiento"].ToString();
                             MtxbxTelefono.Text = reader["Telefono"].ToString();
@@ -316,5 +386,59 @@ namespace Caja___TalkLink
             }
 
         }
+
+        private void dGVUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        public DataSet GetServiciosDataSet()
+        {
+            DataSet dataSet = new DataSet();
+            
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("sp_GetAllServicios", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataSet);
+                    }
+                }
+            }
+
+            return dataSet;
+        }
+
+        private void AddClient_Load(object sender, EventArgs e)
+        {
+            // TODO:  loads data into the 'tLDatabaseDataSet.Servicos' table. 
+            //this.servicosTableAdapter.Fill(this.tLDatabaseDataSet1.Servicos);
+            // Llama al método GetServiciosDataSet para obtener los datos.
+            DataSet serviciosDataSet = GetServiciosDataSet();
+
+            // Asigna el DataSet al DataGridView.
+            dGVUsuarios.AutoGenerateColumns = false;
+            dGVUsuarios.DataSource = serviciosDataSet.Tables[0];
+            // Agregar una columna de CheckBox para la selección de servicios
+            DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn
+            {
+                Name = "ColumnaSeleccion",
+                HeaderText = "Seleccionar",
+                DataPropertyName = "Seleccionado", // Asegúrate de ajustar esto al nombre de la columna en tu DataTable.
+                Width = 80
+            };
+            dGVUsuarios.Columns.Add(checkBoxColumn);
+        }
     }
+
+
+
+
 }
+

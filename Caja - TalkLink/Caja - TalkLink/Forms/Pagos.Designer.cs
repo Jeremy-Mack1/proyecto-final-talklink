@@ -32,7 +32,6 @@
             this.lbl_DatosClientes = new System.Windows.Forms.Label();
             this.btn_verify = new MaterialSkin.Controls.MaterialButton();
             this.pb_users = new FontAwesome.Sharp.IconPictureBox();
-            this.materialListBox1 = new MaterialSkin.Controls.MaterialListBox();
             this.MCBTipoDocumento = new MaterialSkin.Controls.MaterialComboBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.MTxTMontoDebido = new MaterialSkin.Controls.MaterialTextBox();
@@ -42,7 +41,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.MBtnConfirmarPago = new MaterialSkin.Controls.MaterialButton();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.tLDatabaseDataSet = new Caja___TalkLink.TLDatabaseDataSet();
+            this.dGVServicios = new System.Windows.Forms.DataGridView();
+            this.servicosTableAdapter = new Caja___TalkLink.TLDatabaseDataSetTableAdapters.ServicosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pb_users)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVServicios)).BeginInit();
             this.SuspendLayout();
             // 
             // Mtxtbx_Documento
@@ -69,10 +73,10 @@
             // lbl_DatosClientes
             // 
             this.lbl_DatosClientes.AutoSize = true;
-            this.lbl_DatosClientes.Font = new System.Drawing.Font("Jellee Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DatosClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DatosClientes.Location = new System.Drawing.Point(55, 42);
             this.lbl_DatosClientes.Name = "lbl_DatosClientes";
-            this.lbl_DatosClientes.Size = new System.Drawing.Size(186, 24);
+            this.lbl_DatosClientes.Size = new System.Drawing.Size(177, 25);
             this.lbl_DatosClientes.TabIndex = 5;
             this.lbl_DatosClientes.Text = "Datos del Cliente";
             // 
@@ -94,6 +98,7 @@
             this.btn_verify.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btn_verify.UseAccentColor = false;
             this.btn_verify.UseVisualStyleBackColor = true;
+            this.btn_verify.Click += new System.EventHandler(this.btn_verify_Click);
             // 
             // pb_users
             // 
@@ -109,20 +114,6 @@
             this.pb_users.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pb_users.TabIndex = 9;
             this.pb_users.TabStop = false;
-            // 
-            // materialListBox1
-            // 
-            this.materialListBox1.BackColor = System.Drawing.Color.White;
-            this.materialListBox1.BorderColor = System.Drawing.Color.LightGray;
-            this.materialListBox1.Depth = 0;
-            this.materialListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialListBox1.Location = new System.Drawing.Point(54, 286);
-            this.materialListBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialListBox1.Name = "materialListBox1";
-            this.materialListBox1.SelectedIndex = -1;
-            this.materialListBox1.SelectedItem = null;
-            this.materialListBox1.Size = new System.Drawing.Size(369, 272);
-            this.materialListBox1.TabIndex = 8;
             // 
             // MCBTipoDocumento
             // 
@@ -171,7 +162,7 @@
             this.MTxTMontoDebido.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MTxTMontoDebido.Hint = "Monto debido";
             this.MTxTMontoDebido.LeadingIcon = null;
-            this.MTxTMontoDebido.Location = new System.Drawing.Point(488, 344);
+            this.MTxTMontoDebido.Location = new System.Drawing.Point(504, 340);
             this.MTxTMontoDebido.MaxLength = 50;
             this.MTxTMontoDebido.MouseState = MaterialSkin.MouseState.OUT;
             this.MTxTMontoDebido.Multiline = false;
@@ -186,7 +177,7 @@
             // 
             this.lblDatosaPagar.AutoSize = true;
             this.lblDatosaPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblDatosaPagar.Location = new System.Drawing.Point(570, 286);
+            this.lblDatosaPagar.Location = new System.Drawing.Point(579, 286);
             this.lblDatosaPagar.Name = "lblDatosaPagar";
             this.lblDatosaPagar.Size = new System.Drawing.Size(108, 18);
             this.lblDatosaPagar.TabIndex = 13;
@@ -200,7 +191,7 @@
             this.MtxtMontoPagar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MtxtMontoPagar.Hint = "Monto a pagar por el servicio";
             this.MtxtMontoPagar.LeadingIcon = null;
-            this.MtxtMontoPagar.Location = new System.Drawing.Point(489, 442);
+            this.MtxtMontoPagar.Location = new System.Drawing.Point(504, 423);
             this.MtxtMontoPagar.MaxLength = 50;
             this.MtxtMontoPagar.MouseState = MaterialSkin.MouseState.OUT;
             this.MtxtMontoPagar.Multiline = false;
@@ -215,7 +206,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(605, 325);
+            this.label1.Location = new System.Drawing.Point(652, 321);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 16);
             this.label1.TabIndex = 15;
@@ -224,7 +215,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(576, 423);
+            this.label2.Location = new System.Drawing.Point(632, 404);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 16);
             this.label2.TabIndex = 16;
@@ -238,7 +229,7 @@
             this.MBtnConfirmarPago.Enabled = false;
             this.MBtnConfirmarPago.HighEmphasis = true;
             this.MBtnConfirmarPago.Icon = null;
-            this.MBtnConfirmarPago.Location = new System.Drawing.Point(488, 522);
+            this.MBtnConfirmarPago.Location = new System.Drawing.Point(504, 499);
             this.MBtnConfirmarPago.Margin = new System.Windows.Forms.Padding(8, 6, 4, 6);
             this.MBtnConfirmarPago.MouseState = MaterialSkin.MouseState.HOVER;
             this.MBtnConfirmarPago.Name = "MBtnConfirmarPago";
@@ -262,11 +253,31 @@
             this.materialDivider1.TabIndex = 7;
             this.materialDivider1.Text = "materialDivider1";
             // 
+            // tLDatabaseDataSet
+            // 
+            this.tLDatabaseDataSet.DataSetName = "TLDatabaseDataSet";
+            this.tLDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dGVServicios
+            // 
+            this.dGVServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVServicios.Location = new System.Drawing.Point(22, 286);
+            this.dGVServicios.Name = "dGVServicios";
+            this.dGVServicios.RowHeadersWidth = 51;
+            this.dGVServicios.RowTemplate.Height = 24;
+            this.dGVServicios.Size = new System.Drawing.Size(442, 280);
+            this.dGVServicios.TabIndex = 18;
+            // 
+            // servicosTableAdapter
+            // 
+            this.servicosTableAdapter.ClearBeforeFill = true;
+            // 
             // Pagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 594);
+            this.ClientSize = new System.Drawing.Size(830, 587);
+            this.Controls.Add(this.dGVServicios);
             this.Controls.Add(this.MBtnConfirmarPago);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -276,7 +287,6 @@
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.MCBTipoDocumento);
             this.Controls.Add(this.pb_users);
-            this.Controls.Add(this.materialListBox1);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.btn_verify);
             this.Controls.Add(this.lbl_DatosClientes);
@@ -285,6 +295,8 @@
             this.Text = "Pagos";
             this.Load += new System.EventHandler(this.Pagos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_users)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVServicios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,7 +307,6 @@
         private System.Windows.Forms.Label lbl_DatosClientes;
         private MaterialSkin.Controls.MaterialButton btn_verify;
         private FontAwesome.Sharp.IconPictureBox pb_users;
-        private MaterialSkin.Controls.MaterialListBox materialListBox1;
         private MaterialSkin.Controls.MaterialComboBox MCBTipoDocumento;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialTextBox MTxTMontoDebido;
@@ -305,5 +316,8 @@
         private System.Windows.Forms.Label label2;
         private MaterialSkin.Controls.MaterialButton MBtnConfirmarPago;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private TLDatabaseDataSet tLDatabaseDataSet;
+        private System.Windows.Forms.DataGridView dGVServicios;
+        private TLDatabaseDataSetTableAdapters.ServicosTableAdapter servicosTableAdapter;
     }
 }
