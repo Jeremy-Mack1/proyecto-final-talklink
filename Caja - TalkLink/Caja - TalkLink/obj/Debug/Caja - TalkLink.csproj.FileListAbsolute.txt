@@ -79,3 +79,40 @@ C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-fin
 C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.csproj.CoreCompileInputs.cache
 C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.exe
 C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.pdb
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\AppData\TLDatabase.mdf
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\AppData\TLDatabase_log.ldf
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Forms\Login- TalkLink.resx
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Forms\Login- TalkLink.cs
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Forms\Login- TalkLink.Designer.cs
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Caja - TalkLink.exe.config
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Caja - TalkLink.exe
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Caja - TalkLink.pdb
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\EntityFramework.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\MaterialSkin.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\RestSharp.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Buffers.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Memory.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Text.Json.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.ValueTuple.dll
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\EntityFramework.xml
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\RestSharp.xml
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Buffers.xml
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Memory.xml
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Text.Json.xml
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\bin\Debug\System.ValueTuple.xml
+C:\Users\Heine\Documents\Herdel Uni\Proyecto Final - Desarrollo III\proyecto-final-talklink\Caja - TalkLink\Caja - TalkLink\obj\Debug\Caja - TalkLink.csproj.CopyComplete

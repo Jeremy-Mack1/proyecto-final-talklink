@@ -46,6 +46,7 @@
             this.MtxbxTelefonoAlt = new MaterialSkin.Controls.MaterialTextBox();
             this.Mtxbx_Documento = new MaterialSkin.Controls.MaterialTextBox();
             this.dGVUsuarios = new System.Windows.Forms.DataGridView();
+            this.mbtn_EditarCliente = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.dGVUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,7 +151,7 @@
             this.mbtnAgregarCliente.Enabled = false;
             this.mbtnAgregarCliente.HighEmphasis = true;
             this.mbtnAgregarCliente.Icon = null;
-            this.mbtnAgregarCliente.Location = new System.Drawing.Point(155, 522);
+            this.mbtnAgregarCliente.Location = new System.Drawing.Point(78, 522);
             this.mbtnAgregarCliente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mbtnAgregarCliente.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbtnAgregarCliente.Name = "mbtnAgregarCliente";
@@ -192,6 +193,7 @@
             this.mbtnConsultar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.mbtnConsultar.UseAccentColor = false;
             this.mbtnConsultar.UseVisualStyleBackColor = true;
+            this.mbtnConsultar.Click += new System.EventHandler(this.mbtnConsultar_Click);
             // 
             // imageList1
             // 
@@ -334,12 +336,34 @@
             this.dGVUsuarios.Size = new System.Drawing.Size(571, 528);
             this.dGVUsuarios.TabIndex = 17;
             // 
+            // mbtn_EditarCliente
+            // 
+            this.mbtn_EditarCliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mbtn_EditarCliente.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.mbtn_EditarCliente.Depth = 0;
+            this.mbtn_EditarCliente.Enabled = false;
+            this.mbtn_EditarCliente.HighEmphasis = true;
+            this.mbtn_EditarCliente.Icon = null;
+            this.mbtn_EditarCliente.Location = new System.Drawing.Point(289, 522);
+            this.mbtn_EditarCliente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mbtn_EditarCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mbtn_EditarCliente.Name = "mbtn_EditarCliente";
+            this.mbtn_EditarCliente.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.mbtn_EditarCliente.Size = new System.Drawing.Size(150, 36);
+            this.mbtn_EditarCliente.TabIndex = 18;
+            this.mbtn_EditarCliente.Text = "Editar Cliente";
+            this.mbtn_EditarCliente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.mbtn_EditarCliente.UseAccentColor = false;
+            this.mbtn_EditarCliente.UseVisualStyleBackColor = true;
+            // 
             // AddClient
             // 
             this.AcceptButton = this.mbtnAgregarCliente;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1177, 582);
+            this.Controls.Add(this.mbtn_EditarCliente);
             this.Controls.Add(this.dGVUsuarios);
             this.Controls.Add(this.Mtxbx_Documento);
             this.Controls.Add(this.MtxbxTelefonoAlt);
@@ -382,5 +406,6 @@
         private MaterialSkin.Controls.MaterialTextBox MtxbxTelefonoAlt;
         private MaterialSkin.Controls.MaterialTextBox Mtxbx_Documento;
         private System.Windows.Forms.DataGridView dGVUsuarios;
+        private MaterialSkin.Controls.MaterialButton mbtn_EditarCliente;
     }
 }

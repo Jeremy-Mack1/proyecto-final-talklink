@@ -1,4 +1,4 @@
-﻿using Caja___TalkLink.Forms;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -285,7 +285,7 @@ namespace Caja___TalkLink
 
         private void btn_Reportes_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Reportes(), sender);
+            //OpenChildForm(new Reportes(), sender);
         }
 
         private void btn_LogOut_Click(object sender, EventArgs e)
